@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="https://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://rulesets.info/posts/mvis/</loc>
+    <loc>http://rulesets.info/posts/mvis/</loc>
     <lastmod>2021-05-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rulesets.info/posts/</loc>
+    <loc>http://rulesets.info/posts/</loc>
     <lastmod>2021-05-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rulesets.info/</loc>
+    <loc>http://rulesets.info/</loc>
     <lastmod>2021-05-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rulesets.info/posts/bosu/</loc>
+    <loc>http://rulesets.info/posts/bosu/</loc>
     <lastmod>2021-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rulesets.info/posts/sentakki/</loc>
+    <loc>http://rulesets.info/posts/sentakki/</loc>
     <lastmod>2021-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rulesets.info/posts/swing/</loc>
+    <loc>http://rulesets.info/posts/swing/</loc>
     <lastmod>2021-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rulesets.info/posts/tau/</loc>
+    <loc>http://rulesets.info/posts/tau/</loc>
     <lastmod>2021-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rulesets.info/posts/hitokori/</loc>
+    <loc>http://rulesets.info/posts/hitokori/</loc>
     <lastmod>2021-04-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rulesets.info/posts/cytosu/</loc>
+    <loc>http://rulesets.info/posts/cytosu/</loc>
     <lastmod>2021-04-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rulesets.info/posts/rush/</loc>
+    <loc>http://rulesets.info/posts/rush/</loc>
     <lastmod>2021-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rulesets.info/posts/hishigata/</loc>
+    <loc>http://rulesets.info/posts/hishigata/</loc>
     <lastmod>2021-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rulesets.info/categories/</loc>
+    <loc>http://rulesets.info/categories/</loc>
   </url><url>
-    <loc>https://rulesets.info/pages/</loc>
+    <loc>http://rulesets.info/pages/</loc>
   </url><url>
-    <loc>https://rulesets.info/pages/status/</loc>
+    <loc>http://rulesets.info/pages/status/</loc>
   </url><url>
-    <loc>https://rulesets.info/tags/</loc>
+    <loc>http://rulesets.info/tags/</loc>
   </url>
 </urlset>

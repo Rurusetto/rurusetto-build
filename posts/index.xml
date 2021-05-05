@@ -1,90 +1,90 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on rūrusetto</title>
-    <link>https://rulesets.info/posts/</link>
+    <link>http://rulesets.info/posts/</link>
     <description>Recent content in Posts on rūrusetto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rulesets.info/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://rulesets.info/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>mvis</title>
-      <link>https://rulesets.info/posts/mvis/</link>
+      <link>http://rulesets.info/posts/mvis/</link>
       <pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rulesets.info/posts/mvis/</guid>
+      <guid>http://rulesets.info/posts/mvis/</guid>
       <description>A custom visual game mode for osu!lazer project.</description>
     </item>
     
     <item>
       <title>bosu</title>
-      <link>https://rulesets.info/posts/bosu/</link>
+      <link>http://rulesets.info/posts/bosu/</link>
       <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rulesets.info/posts/bosu/</guid>
+      <guid>http://rulesets.info/posts/bosu/</guid>
       <description>A custom game mode for osu!lazer project based on ”I wanna be the Boshy” game</description>
     </item>
     
     <item>
       <title>sentakki</title>
-      <link>https://rulesets.info/posts/sentakki/</link>
+      <link>http://rulesets.info/posts/sentakki/</link>
       <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rulesets.info/posts/sentakki/</guid>
+      <guid>http://rulesets.info/posts/sentakki/</guid>
       <description>A custom ruleset based on Sega’s arcade rhythm game maimai</description>
     </item>
     
     <item>
       <title>swing</title>
-      <link>https://rulesets.info/posts/swing/</link>
+      <link>http://rulesets.info/posts/swing/</link>
       <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rulesets.info/posts/swing/</guid>
+      <guid>http://rulesets.info/posts/swing/</guid>
       <description>A custom game mode for osu!lazer project.</description>
     </item>
     
     <item>
       <title>tau</title>
-      <link>https://rulesets.info/posts/tau/</link>
+      <link>http://rulesets.info/posts/tau/</link>
       <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rulesets.info/posts/tau/</guid>
+      <guid>http://rulesets.info/posts/tau/</guid>
       <description>A customize osu! ruleset with a circle surrounding a paddle and some notes.</description>
     </item>
     
     <item>
       <title>hitokori</title>
-      <link>https://rulesets.info/posts/hitokori/</link>
+      <link>http://rulesets.info/posts/hitokori/</link>
       <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rulesets.info/posts/hitokori/</guid>
+      <guid>http://rulesets.info/posts/hitokori/</guid>
       <description>A custom osu! ruleset based on a dance of fire and ice</description>
     </item>
     
     <item>
       <title>cytosu</title>
-      <link>https://rulesets.info/posts/cytosu/</link>
+      <link>http://rulesets.info/posts/cytosu/</link>
       <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rulesets.info/posts/cytosu/</guid>
+      <guid>http://rulesets.info/posts/cytosu/</guid>
       <description>Cytus-like game mechanics within osu!lazer as a ruleset</description>
     </item>
     
     <item>
       <title>rush!</title>
-      <link>https://rulesets.info/posts/rush/</link>
+      <link>http://rulesets.info/posts/rush/</link>
       <pubDate>Sun, 11 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rulesets.info/posts/rush/</guid>
+      <guid>http://rulesets.info/posts/rush/</guid>
       <description>Custom ruleset for osu!lazer, based loosely on Muse Dash.</description>
     </item>
     
     <item>
       <title>hishigata</title>
-      <link>https://rulesets.info/posts/hishigata/</link>
+      <link>http://rulesets.info/posts/hishigata/</link>
       <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rulesets.info/posts/hishigata/</guid>
+      <guid>http://rulesets.info/posts/hishigata/</guid>
       <description>A ruleset based on Project Rhombus.</description>
     </item>
     
