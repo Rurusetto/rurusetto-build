@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on rūrusetto</title>
-    <link>http://rulesets.info/categories/</link>
+    <link>https://rulesets.info/categories/</link>
     <description>Recent content in Categories on rūrusetto</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://rulesets.info/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://rulesets.info/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
