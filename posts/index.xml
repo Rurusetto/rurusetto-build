@@ -53,6 +53,24 @@
     </item>
     
     <item>
+      <title>Yoso</title>
+      <link>https://rulesets.info/posts/yoso/</link>
+      <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rulesets.info/posts/yoso/</guid>
+      <description>A custom osu! ruleset based on A Dance of Fire and Ice.</description>
+    </item>
+    
+    <item>
+      <title>solosu</title>
+      <link>https://rulesets.info/posts/solosu/</link>
+      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rulesets.info/posts/solosu/</guid>
+      <description>A custom osu! ruleset based on solous</description>
+    </item>
+    
+    <item>
       <title>hitokori</title>
       <link>https://rulesets.info/posts/hitokori/</link>
       <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
@@ -86,6 +104,15 @@
       
       <guid>https://rulesets.info/posts/rush/</guid>
       <description>Custom ruleset for osu!lazer, based loosely on Muse Dash.</description>
+    </item>
+    
+    <item>
+      <title>osu!DIVA</title>
+      <link>https://rulesets.info/posts/osu-diva/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rulesets.info/posts/osu-diva/</guid>
+      <description>A try to recreate Hatsune Miku: Project DIVA as a custom mode for osu!</description>
     </item>
     
     <item>

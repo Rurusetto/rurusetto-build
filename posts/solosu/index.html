@@ -16,16 +16,16 @@
 <meta name="msapplication-TileColor" content="#ff66aa">
 <meta name="theme-color" content="#ff66aa">
 
-<title>hishigata - rūrusetto</title>
-<meta name="title" content="hishigata - rūrusetto">
-<meta name="description" content="A ruleset based on Project Rhombus."/>
+<title>solosu - rūrusetto</title>
+<meta name="title" content="solosu - rūrusetto">
+<meta name="description" content="A custom osu! ruleset based on solous"/>
 <meta name="robots" content="noodp"/>
-<link rel="canonical" href="https://rulesets.info/posts/hishigata/" />
+<link rel="canonical" href="https://rulesets.info/posts/solosu/" />
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:description" content="A ruleset based on Project Rhombus." />
-<meta name="twitter:title" content="hishigata - rūrusetto" />
+<meta name="twitter:description" content="A custom osu! ruleset based on solous" />
+<meta name="twitter:title" content="solosu - rūrusetto" />
 <meta name="twitter:site" content="" />
 <meta name="twitter:creator" content="" />
 <meta property="twitter:url" content="http://rulesets.info/">
@@ -33,13 +33,13 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="hishigata - rūrusetto">
-<meta property="og:description" content="A ruleset based on Project Rhombus.">
-<meta property="og:url" content="https://rulesets.info/posts/hishigata/" />
+<meta property="og:title" content="solosu - rūrusetto">
+<meta property="og:description" content="A custom osu! ruleset based on solous">
+<meta property="og:url" content="https://rulesets.info/posts/solosu/" />
 <meta property="og:site_name" content="rūrusetto" />
 <meta property="og:image" content="https://cdn.discordapp.com/attachments/818164894776033330/838009159030276109/pippi-ruleset.png">
 
-<meta property="article:published_time" content="Latest release at 2021-03-12 00:00:00 &#43;0000 UTC" />
+<meta property="article:published_time" content="Latest release at 2021-04-29 00:00:00 &#43;0000 UTC" />
 
 
 
@@ -49,11 +49,11 @@
 { 
     "@context": "http://schema.org", 
     "@type": "BlogPosting",
-    "headline": "hishigata",
+    "headline": "solosu",
     "genre": "",  
-    "url": "https:\/\/rulesets.info\/posts\/hishigata\/",
-    "datePublished": "2021-03-12 00:00:00 \u002b0000 UTC",
-    "description": "A ruleset based on Project Rhombus.",
+    "url": "https:\/\/rulesets.info\/posts\/solosu\/",
+    "datePublished": "2021-04-29 00:00:00 \u002b0000 UTC",
+    "description": "A custom osu! ruleset based on solous",
     "author": {
         "@type": "Person",
         "name": ""
@@ -261,141 +261,94 @@
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
           <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">hishigata</h1>
+            <h1 class="post-title" itemprop="name headline">solosu</h1>
 
-            <p class="post-meta">Latest release at <time datetime='2021-03-12T00:00:00Z' itemprop="datePublished">March 12, 2021</time></p>
+            <p class="post-meta">Latest release at <time datetime='2021-04-29T00:00:00Z' itemprop="datePublished">April 29, 2021</time></p>
            
                  
           </header>
 
           <div class="post-content" itemprop="articleBody">
-            <h1 id="status">status</h1>
+            <!-- raw HTML omitted -->
+<h1 id="status">status</h1>
 <ul>
-<li>Status : Active Development</li>
-<li>Last Update : 2021.311.0</li>
+<li>Status : Abandoned</li>
+<li>Last Update : No release tag</li>
 <li>Can import and play without error : Yes</li>
 </ul>
 <h1 id="overview">overview</h1>
 <ul>
-<li>Creator : <a href="https://github.com/LumpBloom7">Bloom</a></li>
-<li>Availability : Available publicly</li>
-<li>GitHub Repositories : <a href="https://github.com/LumpBloom7/hishigata">LumpBloom7/hishigata</a></li>
-<li>Discord : <a href="https://discord.gg/CQPNADu">hishikki Dev Server</a></li>
-<li>Support : <a href="https://ko-fi.com/bloom">Ko-fi</a> or <a href="https://www.paypal.com/paypalme/DerrickTimmermans">PayPal</a></li>
+<li>Creator : <a href="https://github.com/Flutterish">Peri</a></li>
+<li>Availability : A ruleset file available on Discord, a repositories will available soon but you can download this ruleset in <a href="https://rulesets.info/pages/status/">status</a> page.</li>
 </ul>
-<p>Sentakki is a custom ruleset based on <a href="https://www.pcgamingwiki.com/wiki/Project_Rhombus">Project Rhombus</a> and <a href="https://undertale.fandom.com/wiki/SOUL_Modes#Green">Undertale&rsquo;s Shield Mode</a>. The ruleset is developed by Bloom.</p>
+<p>Solosu is a custom osu! ruleset based on <a href="https://thc-games.itch.io/solous">Solous</a> and is an adoption of <a href="https://github.com/Coppertine/Solosu">another no longer developed ruleset</a>. The ruleset is developed by Peri. Currently this ruleset is finish but not available publicly now.</p>
 <h1 id="gameplay">gameplay</h1>
-<p>Use the arrow keys or touch screen to point the cursor in the direction of the oncoming arrows to block them.</p>
+<p>The playfield consists of a 3 dimensional cube, slowly rotating on the top of the screen, a pink player and 3 lanes the player moves between. The cube is presumed to be an enemy of the player as it sends obstacles towards them and when some are intercepted, they are sent back into the cube.</p>
+<h3 id="packets">packets</h3>
+<p>Packets are cyan rounded squares. They emerge from the cube and when the player is exactly on top of one, they need to press either of the action buttons to intercept it. The farther away from the player the packet is, the less points intercepting it gives. During Kiai, they speed up by 33% and start pulsing along the rhythm. When hit with a &ldquo;Perfect&rdquo; or &ldquo;Great&rdquo; result, they create a small dot with the same colour as the judgement they received, which then moves to the side, waits 2 beats and then is absorbed by the cube.</p>
+<h3 id="streams">streams</h3>
+<p>Streams are reddish lines traveling from the top of the screen towards the bottom. The player has to avoid them. In Kiai, they speed up by 166% and start splitting their RGB channels to the rhythm.</p>
+<h3 id="the-cube">the cube</h3>
+<p>The cube is a 3 dimensional entity located at the middle top of the screen. It slowly rotates. Whenever a packet is hit, or a stream disappears, it shrinks to 92% of its size and quickly goes back to the original size. In Kiai, it splits its RBG channels to the rhythm.</p>
 <h1 id="controls">controls</h1>
-<p>Arrow keys or touch screen.</p>
+<p>The player has 3 lanes it can be on - left, center and right. The player is on the center lane by default and moves there when no movement buttons are held. To move to a different lane, the corresponding movement button has to be held.</p>
 <h3 id="default-controls">default controls</h3>
 <ul>
-<li>Up - <code>UP</code> <code>W</code></li>
-<li>Right - <code>RIGHT</code> <code>D</code></li>
-<li>Down - <code>DOWN</code> <code>S</code></li>
-<li>Left - <code>LEFT</code> <code>A</code></li>
+<li>Left - <code>LEFT</code></li>
+<li>Center - <code>UP</code></li>
+<li>Right - <code>RIGHT</code></li>
+</ul>
+<h3 id="flexible-input">flexible input</h3>
+<p>Solosu, similarly to <a href="https://rulesets.info/posts/hishigata/">hishigata</a>, implements a control system called flexible input. This system allows you to hold for example Left, then while still holding Left, hold Right, then release Right, and in effect the player would have moved to the Left lane, then the Right lane and then back to the Left lane.</p>
+<p>Flexible input tech:</p>
+<ul>
+<li><code>2 Lane Castle</code> : Hold A, Repeatedly Hold and Release B.
+<ul>
+<li>The player moves to (A, B), (A, B), A&hellip;</li>
+</ul>
+</li>
+<li><code>3 Lane Castle</code> : Hold A, ( Repeatedly Hold B, Release B, Hold C, Release C ).
+<ul>
+<li>The player moves to (A, B, A, C), (A, B, A, C), A, B, A&hellip;</li>
+</ul>
+</li>
+<li><code>Stairs</code> : Hold A, ( Repeatedly Hold B, Hold C, Release C, Release B ).
+<ul>
+<li>The player moves to (A, B, C, B), (A, B, C, B), A, B, C&hellip;</li>
+</ul>
+</li>
+<li><code>Regrab Buffer</code> : Hold all keys. Regrab one key.
+<ul>
+<li>The player moves to the regrabbed lane without moving back to the center lane.</li>
+</ul>
+</li>
 </ul>
 <h1 id="mods">mods</h1>
 <h3 id="difficulty-reduction">difficulty reduction</h3>
 <ul>
-<li>
-<p><img src="mod-icon/half-time-mod.png" alt="Half Time Icon"> Half Time</p>
+<li><img src="mod-icon/no-fail-mod.png" alt="No Fail Icon"> No Fail
 <ul>
-<li>Less Zoom&hellip;
+<li>TCP at its finest
 <ul>
-<li>Decreases speed .75x.</li>
-</ul>
-</li>
-<li>Score Multiplier: 0.30x</li>
-<li>Click the icon again for<em>Daycore Mod</em> : Whoaaaaa&hellip;
-<ul>
-<li>Decreases speed .75x and lowers audio pitch.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><img src="mod-icon/no-fail-mod.png" alt="No Fail Icon"> No Fail</p>
-<ul>
-<li>You can&rsquo;t fail, no matter what.
-<ul>
-<li>Makes it impossoble to fail.</li>
+<li>Makes it impossible to fail.</li>
 </ul>
 </li>
 <li>Score Multiplier: 0.50x</li>
 </ul>
 </li>
 </ul>
-<h3 id="difficulty-increase">difficulty increase</h3>
-<ul>
-<li>
-<p><img src="mod-icon/hard-rock-mod.png" alt="Hard Rock Icon"> Hard Rock</p>
-<ul>
-<li>Everything just got a bit harder&hellip;</li>
-<li>Score Multiplier: 1.06x</li>
-</ul>
-</li>
-<li>
-<p><img src="mod-icon/sudden-death-mod.png" alt="Sudden Death Icon"> Sudden Death</p>
-<ul>
-<li>Miss and fail.
-<ul>
-<li>If you miss, you fail.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><img src="mod-icon/double-time-mod.png" alt="Double Time Icon"> Double Time</p>
-<ul>
-<li>Zoooooooooom&hellip;
-<ul>
-<li>Increases speed 1.50x.</li>
-</ul>
-</li>
-<li>Score Multiplier: 1.12x</li>
-<li>Click the icon again for <code>Nightcore Mod</code> : Uguuuuuuuu&hellip;
-<ul>
-<li>Increases speed 1.50x and raises audio pitch.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 <h3 id="automation">automation</h3>
 <ul>
-<li><img src="mod-icon/autoplay-mod.png" alt="Autoplay Icon"> Autoplay
+<li><img src="mod-icon/auto-mod.png" alt="Auto Icon"> Auto
 <ul>
-<li>Watch a perfect automated play through the song.</li>
-</ul>
-</li>
-</ul>
-<h3 id="fun">fun</h3>
-<ul>
-<li><img src="mod-icon/wind-up-mod.png" alt="Wind Up Icon"> Wind Up
-<ul>
-<li>Can you keep up?
-<ul>
-<li>Slowly increases speed from 1.00x to 1.50x throughout the map and raises the pitch alongside the speed.</li>
-</ul>
-</li>
-<li>Click the icon again for <code>Wind Down Mod</code> : Slooow doooown&hellip;
-<ul>
-<li>Slowly decreases speed from 1.00x to 0.75x throughout the map and lowers the pitch alongside the speed.</li>
-</ul>
-</li>
-<li><em>Initial rate</em>, <em>Final rate</em>, and <em>Adjust pitch</em> are customizable parameters.</li>
+<li>Let a cute bot do&hellip; wait, where did he go?</li>
 </ul>
 </li>
 </ul>
 <h1 id="settings">settings</h1>
-<p>You can set <code>arrow shape</code> to <em>sharp</em> or <em>round</em>.</p>
-<h1 id="video">video</h1>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/v0FV6D1HaBk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
+<p>No setting available</p>
+<h1 id="preview">preview</h1>
+<p>Not available now</p>
 
           </div>
 
@@ -412,9 +365,9 @@
         <div class="post-img">
             
             
-              
-                <img width="100%" src="/posts/hishigata/hishigata-logo.png" alt="hishigata-logo.png">
-              
+              <div class="img-logo">
+                <img width="100%" src="/posts/solosu/solosu-logo.png" alt="solosu-logo.png">
+              </div>
             
             
         </div>
