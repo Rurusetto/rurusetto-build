@@ -6,7 +6,16 @@
     <description>Recent content on rūrusetto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rulesets.info/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 May 2021 04:00:00 +0700</lastBuildDate><atom:link href="https://rulesets.info/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>touhosu</title>
+      <link>https://rulesets.info/posts/touhosu/</link>
+      <pubDate>Thu, 13 May 2021 04:00:00 +0700</pubDate>
+      
+      <guid>https://rulesets.info/posts/touhosu/</guid>
+      <description>A custom osu! ruleset based on Touhou Project games.</description>
+    </item>
+    
     <item>
       <title>mvis</title>
       <link>https://rulesets.info/posts/mvis/</link>
@@ -14,6 +23,15 @@
       
       <guid>https://rulesets.info/posts/mvis/</guid>
       <description>A custom visual game mode for osu!lazer project.</description>
+    </item>
+    
+    <item>
+      <title>Yoso</title>
+      <link>https://rulesets.info/posts/yoso/</link>
+      <pubDate>Sun, 02 May 2021 15:54:00 +0700</pubDate>
+      
+      <guid>https://rulesets.info/posts/yoso/</guid>
+      <description>A custom osu! ruleset based on A Dance of Fire and Ice.</description>
     </item>
     
     <item>
@@ -50,15 +68,6 @@
       
       <guid>https://rulesets.info/posts/tau/</guid>
       <description>A customize osu! ruleset with a circle surrounding a paddle and some notes.</description>
-    </item>
-    
-    <item>
-      <title>Yoso</title>
-      <link>https://rulesets.info/posts/yoso/</link>
-      <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://rulesets.info/posts/yoso/</guid>
-      <description>A custom osu! ruleset based on A Dance of Fire and Ice.</description>
     </item>
     
     <item>
@@ -112,7 +121,7 @@
       <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rulesets.info/posts/osu-diva/</guid>
-      <description>A try to recreate Hatsune Miku: Project DIVA as a custom mode for osu!</description>
+      <description>A recreation of Hatsune Miku: Project DIVA as a custom mode for osu!</description>
     </item>
     
     <item>
