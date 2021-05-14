@@ -67,3 +67,7 @@ body.dark-mode div.modal-footer {
 body.dark-mode button.btn.btn-secondary {
   color: #000;
 }
+
+body.dark-mode div.mono-font {
+  font-family: 'Courier New', monospace;
+}
