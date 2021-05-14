@@ -258,600 +258,632 @@
         
 <div class="row">
 <div class="col-md-8">
-<article class="post">
+  <article class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">rulesets status</h1>
-  </header>
-
-  <div class="post-content">
-      <div id="fetch-progress">
-          <div id="progresstext">
-              Fetching data from GitHub API...
-          </div>
-          <div class="progress">
-              <div class="progress-bar progress-bar-striped" style="min-width: 20px;"></div>
-          </div>
-      </div>
-    <p id="last-update"></p>
-      <p id="lazer-status">osu!lazer latest version : Fetching Version... (Fetching time...)</p>
-
-      <div class="modal fade" id="lazerModal" tabindex="-1" aria-labelledby="lazerModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h3 id="lazer-title" class="modal-title">Fetching title...</h3>
-                  </div>
-                  <div class="modal-body">
-                      <h4>Changelog</h4>
-                      <p id="lazer-changelog">Fetching changelog...</p>
-                      <h4>File Detail</h4>
-                      <h5>Windows</h5>
-                      <p id="lazer-size-windows">Size : Fetching...</p>
-                      <h5>MacOS</h5>
-                      <p id="lazer-size-mac">Size : Fetching...</p>
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <a id="lazer-release" href="https://github.com/ppy/osu/releases/">
-                          <button id="lazer-release-button" type="button" class="btn btn-primary">Release Page</button>
-                      </a>
-                      <a id="lazer-download-windows" href="https://github.com/ppy/osu/releases/latest">
-                          <button id="lazer-download-windows-button" type="button" class="btn btn-primary">Fetching download link...</button>
-                      </a>
-                      <a id="lazer-download-mac" href="https://github.com/ppy/osu/releases/latest">
-                          <button id="lazer-download-mac-button" type="button" class="btn btn-primary">Fetching download link...</button>
-                      </a>
-                  </div>
-              </div>
-          </div>
-      </div></p>
-<p>✅ = Everything works perfectly.</p>
-<p>🔵 = Show in-game error but can play normally.</p>
-<p>⚠️ = Can import but some function or mod is not working or making client crash.</p>
-<p>❌ = Cannot import.</p>
-
-
-
-
-
-
-      <table class="table table-striped">
-          <thead>
-          <tr>
-              <th>Rulesets</th>
-              <th>Status</th>
-              <th>Description</th>
-              <th>Latest Version</th>
-              <th>Detail & Download</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-              <td><a href="https://rulesets.info/posts/mvis">mvis</a></td>
-              <td>✅</td>
-              <td>Everything works</td>
-              <td id="mvis-version">Fetching data...</td>
-              <td>
-                  <button id="mvis-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#mvisModal" disabled>
-                      Fetching data...
-                  </button>
-
-                  <div class="modal fade" id="mvisModal" tabindex="-1" aria-labelledby="mvisModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 id="mvis-title" class="modal-title">Fetching title...</h3>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Changelog</h4>
-                                  <p id="mvis-changelog">Fetching changelog...</p>
-                                  <h4>File Detail</h4>
-                                  <p id="mvis-size">Size : Fetching...</p>
-                                  <p id="mvis-time">Update Time : Fetching...</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a id="mvis-release" href="https://github.com/EVAST9919/lazer-m-vis/releases/">
-                                      <button id="mvis-release-button" type="button" class="btn btn-primary">Release Page</button>
-                                  </a>
-                                  <a id="mvis-download" href="https://github.com/EVAST9919/lazer-m-vis/releases/latest">
-                                      <button id="mvis-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-          </tr>
-          <tr>
-              <td><a href="https://rulesets.info/posts/hitokori">hitokori</a></td>
-              <td>✅</td>
-              <td>Everything works</td>
-              <td id="hitokori-version">Fetching data...</td>
-              <td>
-                  <button id="hitokori-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#hitokoriModal" disabled>
-                      Fetching data...
-                  </button>
-
-                  <div class="modal fade" id="hitokoriModal" tabindex="-1" aria-labelledby="hitokoriModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 id="hitokori-title" class="modal-title">Fetching title...</h3>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Changelog</h4>
-                                  <p id="hitokori-changelog">Fetching changelog...</p>
-                                  <h4>File Detail</h4>
-                                  <p id="hitokori-size">Size : Fetching...</p>
-                                  <p id="hitokori-time">Update Time : Fetching...</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a id="hitokori-release" href="https://github.com/Flutterish/Hitokori/releases/">
-                                      <button id="hitokori-release-button" type="button" class="btn btn-primary">Release Page</button>
-                                  </a>
-                                  <a id="hitokori-download" href="https://github.com/Flutterish/Hitokori/releases/latest">
-                                      <button id="hitokori-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-          </tr>
-          <tr>
-              <td><a href="https://rulesets.info/posts/bosu">bosu</a></td>
-              <td>✅</td>
-              <td>Everything works</td>
-              <td id="bosu-version">Fetching data...</td>
-              <td>
-                  <button id="bosu-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#bosuModal" disabled>
-                      Fetching data...
-                  </button>
-
-                  <div class="modal fade" id="bosuModal" tabindex="-1" aria-labelledby="bosuModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 id="bosu-title" class="modal-title">Fetching title...</h3>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Changelog</h4>
-                                  <p id="bosu-changelog">Fetching changelog...</p>
-                                  <h4>File Detail</h4>
-                                  <p id="bosu-size">Size : Fetching...</p>
-                                  <p id="bosu-time">Update Time : Fetching...</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a id="bosu-release" href="https://github.com/EVAST9919/bosu/releases/">
-                                      <button id="bosu-release-button" type="button" class="btn btn-primary">Release Page</button>
-                                  </a>
-                                  <a id="bosu-download" href="https://github.com/EVAST9919/bosu/releases/latest">
-                                      <button id="bosu-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-          </tr>
-          <tr>
-              <td><a href="https://rulesets.info/posts/cytosu">cytosu</a></td>
-              <td>✅</td>
-              <td>Everything works</td>
-              <td id="cytosu-version">Fetching data...</td>
-              <td>
-                  <button id="cytosu-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#cytosuModal" disabled>
-                      Fetching data...
-                  </button>
-
-                  <div class="modal fade" id="cytosuModal" tabindex="-1" aria-labelledby="cytosuModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 id="cytosu-title" class="modal-title">Fetching title...</h3>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Changelog</h4>
-                                  <p id="cytosu-changelog">Fetching changelog...</p>
-                                  <h4>File Detail</h4>
-                                  <p id="cytosu-size">Size : Fetching...</p>
-                                  <p id="cytosu-time">Update Time : Fetching...</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a id="cytosu-release" href="https://github.com/GSculerlor/Cytosu/releases/">
-                                      <button id="cytosu-release-button" type="button" class="btn btn-primary">Release Page</button>
-                                  </a>
-                                  <a id="cytosu-download" href="https://github.com/GSculerlor/Cytosu/releases/latest">
-                                      <button id="cytosu-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-          </tr>
-          <tr>
-              <td><a href="https://rulesets.info/posts/sentakki">sentakki</a></td>
-              <td>✅</td>
-              <td>Everything works</td>
-              <td id="sentakki-version">Fetching data...</td>
-              <td>
-                  <button id="sentakki-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#sentakkiModal" disabled>
-                      Fetching data...
-                  </button>
-
-                  <div class="modal fade" id="sentakkiModal" tabindex="-1" aria-labelledby="sentakkiModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 id="sentakki-title" class="modal-title">Fetching title...</h3>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Changelog</h4>
-                                  <p id="sentakki-changelog">Fetching changelog...</p>
-                                  <h4>File Detail</h4>
-                                  <p id="sentakki-size">Size : Fetching...</p>
-                                  <p id="sentakki-time">Update Time : Fetching...</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a id="sentakki-release" href="https://github.com/LumpBloom7/sentakki/releases/">
-                                      <button id="sentakki-release-button" type="button" class="btn btn-primary">Release Page</button>
-                                  </a>
-                                  <a id="sentakki-download" href="https://github.com/LumpBloom7/sentakki/releases/latest">
-                                      <button id="sentakki-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-          </tr>
-          <tr>
-              <td><a href="https://rulesets.info/posts/tau">tau</a></td>
-              <td>✅</td>
-              <td>Everything works</td>
-              <td id="tau-version">Fetching data...</td>
-              <td>
-                  <button id="tau-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#tauModal" disabled>
-                      Fetching data...
-                  </button>
-
-                  <div class="modal fade" id="tauModal" tabindex="-1" aria-labelledby="tauModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 id="tau-title" class="modal-title">Fetching title...</h3>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Changelog</h4>
-                                  <p id="tau-changelog">Fetching changelog...</p>
-                                  <h4>File Detail</h4>
-                                  <p id="tau-size">Size : Fetching...</p>
-                                  <p id="tau-time">Update Time : Fetching...</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a id="tau-release" href="https://github.com/Altenhh/tau/releases/">
-                                      <button id="tau-release-button" type="button" class="btn btn-primary">Release Page</button>
-                                  </a>
-                                  <a id="tau-download" href="https://github.com/Altenhh/tau/releases/latest">
-                                      <button id="tau-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-          </tr>
-          <tr>
-              <td><a href="https://rulesets.info/posts/rush">rush!</a></td>
-              <td>✅</td>
-              <td>Everything works</td>
-              <td id="rush-version">Fetching data...</td>
-              <td>
-                  <button id="rush-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#rushModal" disabled>
-                      Fetching data...
-                  </button>
-
-                  <div class="modal fade" id="rushModal" tabindex="-1" aria-labelledby="rushModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 id="rush-title" class="modal-title">Fetching title...</h3>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Changelog</h4>
-                                  <p id="rush-changelog">Fetching changelog...</p>
-                                  <h4>File Detail</h4>
-                                  <p id="rush-size">Size : Fetching...</p>
-                                  <p id="rush-time">Update Time : Fetching...</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a id="rush-release" href="https://github.com/Beamographic/rush/releases/">
-                                      <button id="rush-release-button" type="button" class="btn btn-primary">Release Page</button>
-                                  </a>
-                                  <a id="rush-download" href="https://github.com/Beamographic/rush/releases/latest">
-                                      <button id="rush-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-          </tr>
-          <tr>
-              <td><a href="https://rulesets.info/posts/swing">swing</a></td>
-              <td>✅</td>
-              <td>Everything works</td>
-              <td id="swing-version">Fetching data...</td>
-              <td>
-                  <button id="swing-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#swingModal" disabled>
-                      Fetching data...
-                  </button>
-
-                  <div class="modal fade" id="swingModal" tabindex="-1" aria-labelledby="swingModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 id="swing-title" class="modal-title">Fetching title...</h3>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Changelog</h4>
-                                  <p id="swing-changelog">Fetching changelog...</p>
-                                  <h4>File Detail</h4>
-                                  <p id="swing-size">Size : Fetching...</p>
-                                  <p id="swing-time">Update Time : Fetching...</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a id="swing-release" href="https://github.com/EVAST9919/lazer-swing/releases/">
-                                      <button id="swing-release-button" type="button" class="btn btn-primary">Release Page</button>
-                                  </a>
-                                  <a id="swing-download" href="https://github.com/EVAST9919/lazer-swing/releases/latest">
-                                      <button id="swing-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-          </tr>
-          <tr>
-              <td><a href="https://rulesets.info/posts/hishigata">hishigata</a></td>
-              <td>✅</td>
-              <td>Everything works</td>
-              <td id="hishigata-version">Fetching data...</td>
-              <td>
-                  <button id="hishigata-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#hishigataModal" disabled>
-                      Fetching data...
-                  </button>
-
-                  <div class="modal fade" id="hishigataModal" tabindex="-1" aria-labelledby="hishigataModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 id="hishigata-title" class="modal-title">Fetching title...</h3>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Changelog</h4>
-                                  <p id="hishigata-changelog">Fetching changelog...</p>
-                                  <h4>File Detail</h4>
-                                  <p id="hishigata-size">Size : Fetching...</p>
-                                  <p id="hishigata-time">Update Time : Fetching...</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a id="hishigata-release" href="https://github.com/LumpBloom7/hishigata/releases/">
-                                      <button id="hishigata-release-button" type="button" class="btn btn-primary">Release Page</button>
-                                  </a>
-                                  <a id="hishigata-download" href="https://github.com/LumpBloom7/hishigata/releases/latest">
-                                      <button id="hishigata-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-          </tr>
-          <tr>
-              <td><a href="https://rulesets.info/posts/soyokaze">soyokaze!</a></td>
-              <td>⚠️</td>
-              <td>Autoplay is broke (cannot use this mod)</td>
-              <td id="soyokaze-version">Fetching data...</td>
-              <td>
-                  <button id="soyokaze-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#soyokazeModal" disabled>
-                      Fetching data...
-                  </button>
-
-                  <div class="modal fade" id="soyokazeModal" tabindex="-1" aria-labelledby="soyokazeModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 id="soyokaze-title" class="modal-title">Fetching title...</h3>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Changelog</h4>
-                                  <p id="soyokaze-changelog">Fetching changelog...</p>
-                                  <h4>File Detail</h4>
-                                  <p id="soyokaze-size">Size : Fetching...</p>
-                                  <p id="soyokaze-time">Update Time : Fetching...</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a id="soyokaze-release" href="https://github.com/goodtrailer/soyokaze/releases/">
-                                      <button id="soyokaze-release-button" type="button" class="btn btn-primary">Release Page</button>
-                                  </a>
-                                  <a id="soyokaze-download" href="https://github.com/goodtrailer/soyokaze/releases/latest">
-                                      <button id="soyokaze-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-          </tr>
-          <tr>
-              <td><a href="https://rulesets.info/posts/osu-diva">osu!DIVA</a></td>
-              <td>⚠️</td>
-              <td>Autoplay is broke (cannot use this mod)</td>
-              <td id="diva-version">Fetching data...</td>
-              <td>
-                  <button id="diva-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#divaModal" disabled>
-                      Fetching data...
-                  </button>
-
-                  <div class="modal fade" id="divaModal" tabindex="-1" aria-labelledby="divaModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 id="diva-title" class="modal-title">Fetching title...</h3>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Changelog</h4>
-                                  <p id="diva-changelog">Fetching changelog...</p>
-                                  <h4>File Detail</h4>
-                                  <p id="diva-size">Size : Fetching...</p>
-                                  <p id="diva-time">Update Time : Fetching...</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a id="diva-release" href="https://github.com/Thesola10/osu-DIVA/releases/">
-                                      <button id="diva-release-button" type="button" class="btn btn-primary">Release Page</button>
-                                  </a>
-                                  <a id="diva-download" href="https://github.com/Thesola10/osu-DIVA/releases/latest">
-                                      <button id="diva-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-          </tr>
-          <tr>
-              <td><a href="https://rulesets.info/posts/touhosu">touhosu</a></td>
-              <td>✅</td>
-              <td>Everything works</td>
-              <td id="touhosu-version">Fetching data...</td>
-              <td>
-                  <button id="touhosu-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#touhosuModal" disabled>
-                      Fetching data...
-                  </button>
-
-                  <div class="modal fade" id="touhosuModal" tabindex="-1" aria-labelledby="touhosuModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 id="touhosu-title" class="modal-title">Fetching title...</h3>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Changelog</h4>
-                                  <p id="touhosu-changelog">Fetching changelog...</p>
-                                  <h4>File Detail</h4>
-                                  <p id="touhosu-size">Size : Fetching...</p>
-                                  <p id="touhosu-time">Update Time : Fetching...</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a id="touhosu-release" href="https://github.com/EVAST9919/touhosu/releases/">
-                                      <button id="touhosu-release-button" type="button" class="btn btn-primary">Release Page</button>
-                                  </a>
-                                  <a id="touhosu-download" href="https://github.com/EVAST9919/touhosu/releases/latest">
-                                      <button id="touhosu-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-          </tr>
-          <tr>
-              <td><a href="https://rulesets.info/posts/solosu">solosu</a></td>
-              <td>⚠️</td>
-              <td>Autoplay is broke (cannot use this mod)</td>
-              <td>-</td>
-              <td>
-                  <button id="solosu-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#solosuModal">
-                    detail & download
-              </button>
-
-                  <div class="modal fade" id="solosuModal" tabindex="-1" aria-labelledby="solosuModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 id="solosu-title" class="modal-title">Solosu changelog</h3>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Changelog</h4>
-                                  <p id="solosu-changelog">-</p>
-                                  <h4>File Detail</h4>
-                                  <p id="solosu-size">Size : 87040 bytes</p>
-                                  <p id="solosu-time">Update Time : 2021-04-28T23:00:50Z</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button id="solosu-release-button" type="button" class="btn btn-primary" disabled>Release Page</button>
-                                  <a id="solosu-download" href="https://cdn.discordapp.com/attachments/719981519007121498/837055801507708948/osu.Game.Rulesets.Solosu.dll">
-                                      <button id="solosu-download-button" type="button" class="btn btn-primary">Download</button>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-          </tr>
-          <tr>
-              <td><a href="https://rulesets.info/posts/yoso">yoso</a></td>
-              <td>✅</td>
-              <td>Everything works</td>
-              <td>2021.513.0</td>
-<!--              <td><a href="https://www.patreon.com/posts/yoso-2021-513-0-51215430">↗️ Patreon</a></td>-->
-              <td>
-                  <button id="yoso-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#yosoModal">
+    <header class="post-header">
+      <h1 class="post-title">rulesets status</h1>
+    </header>
+  
+    <div class="post-content">
+        <div id="fetch-progress">
+            <div id="progresstext">
+                Fetching data from GitHub API...
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped" style="min-width: 20px;"></div>
+            </div>
+        </div>
+      <p id="last-update"></p>
+        <p id="lazer-status">osu!lazer latest version : Fetching Version... (Fetching time...)</p>
+  
+        <div class="modal fade" id="lazerModal" tabindex="-1" aria-labelledby="lazerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="lazer-title" class="modal-title">Fetching title...</h3>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Changelog</h4>
+                        <p id="lazer-changelog">Fetching changelog...</p>
+                        <h4>File Detail</h4>
+                        <h5>Windows</h5>
+                        <div class="mono-font">
+                          <p id="lazer-size-windows">Size : Fetching...</p>
+                        </div>
+                        <h5>MacOS</h5>
+                        <div class="mono-font">
+                          <p id="lazer-size-mac">Size : Fetching...</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a id="lazer-release" href="https://github.com/ppy/osu/releases/">
+                            <button id="lazer-release-button" type="button" class="btn btn-primary">Release Page</button>
+                        </a>
+                        <a id="lazer-download-windows" href="https://github.com/ppy/osu/releases/latest">
+                            <button id="lazer-download-windows-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                        </a>
+                        <a id="lazer-download-mac" href="https://github.com/ppy/osu/releases/latest">
+                            <button id="lazer-download-mac-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div></p>
+  <p>✅ = Everything works perfectly.</p>
+  <p>🔵 = Show in-game error but can play normally.</p>
+  <p>⚠️ = Can import but some function or mod is not working or making client crash.</p>
+  <p>❌ = Cannot import.</p>
+  
+  
+  
+  
+  
+  
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Rulesets</th>
+                <th>Status</th>
+                <th>Description</th>
+                <th>Latest Version</th>
+                <th>Detail & Download</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><a href="https://rulesets.info/posts/mvis">mvis</a></td>
+                <td>✅</td>
+                <td>Everything works</td>
+                <td id="mvis-version">Fetching data...</td>
+                <td>
+                    <button id="mvis-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#mvisModal" disabled>
+                        Fetching data...
+                    </button>
+  
+                    <div class="modal fade" id="mvisModal" tabindex="-1" aria-labelledby="mvisModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="mvis-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="mvis-changelog">Fetching changelog...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="mvis-size">Size : Fetching...</p>
+                                        <p id="mvis-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="mvis-release" href="https://github.com/EVAST9919/lazer-m-vis/releases/">
+                                        <button id="mvis-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="mvis-download" href="https://github.com/EVAST9919/lazer-m-vis/releases/latest">
+                                        <button id="mvis-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://rulesets.info/posts/hitokori">hitokori</a></td>
+                <td>✅</td>
+                <td>Everything works</td>
+                <td id="hitokori-version">Fetching data...</td>
+                <td>
+                    <button id="hitokori-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#hitokoriModal" disabled>
+                        Fetching data...
+                    </button>
+  
+                    <div class="modal fade" id="hitokoriModal" tabindex="-1" aria-labelledby="hitokoriModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="hitokori-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="hitokori-changelog">Fetching changelog...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="hitokori-size">Size : Fetching...</p>
+                                        <p id="hitokori-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="hitokori-release" href="https://github.com/Flutterish/Hitokori/releases/">
+                                        <button id="hitokori-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="hitokori-download" href="https://github.com/Flutterish/Hitokori/releases/latest">
+                                        <button id="hitokori-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://rulesets.info/posts/bosu">bosu</a></td>
+                <td>✅</td>
+                <td>Everything works</td>
+                <td id="bosu-version">Fetching data...</td>
+                <td>
+                    <button id="bosu-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#bosuModal" disabled>
+                        Fetching data...
+                    </button>
+  
+                    <div class="modal fade" id="bosuModal" tabindex="-1" aria-labelledby="bosuModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="bosu-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="bosu-changelog">Fetching changelog...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">>
+                                        <p id="bosu-size">Size : Fetching...</p>
+                                        <p id="bosu-time">Update Time : Fetching...</p>
+                                    </div>
+                                </>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="bosu-release" href="https://github.com/EVAST9919/bosu/releases/">
+                                        <button id="bosu-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="bosu-download" href="https://github.com/EVAST9919/bosu/releases/latest">
+                                        <button id="bosu-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://rulesets.info/posts/cytosu">cytosu</a></td>
+                <td>✅</td>
+                <td>Everything works</td>
+                <td id="cytosu-version">Fetching data...</td>
+                <td>
+                    <button id="cytosu-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#cytosuModal" disabled>
+                        Fetching data...
+                    </button>
+  
+                    <div class="modal fade" id="cytosuModal" tabindex="-1" aria-labelledby="cytosuModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="cytosu-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="cytosu-changelog">Fetching changelog...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="cytosu-size">Size : Fetching...</p>
+                                        <p id="cytosu-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="cytosu-release" href="https://github.com/GSculerlor/Cytosu/releases/">
+                                        <button id="cytosu-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="cytosu-download" href="https://github.com/GSculerlor/Cytosu/releases/latest">
+                                        <button id="cytosu-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://rulesets.info/posts/sentakki">sentakki</a></td>
+                <td>✅</td>
+                <td>Everything works</td>
+                <td id="sentakki-version">Fetching data...</td>
+                <td>
+                    <button id="sentakki-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#sentakkiModal" disabled>
+                        Fetching data...
+                    </button>
+  
+                    <div class="modal fade" id="sentakkiModal" tabindex="-1" aria-labelledby="sentakkiModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="sentakki-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="sentakki-changelog">Fetching changelog...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="sentakki-size">Size : Fetching...</p>
+                                        <p id="sentakki-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="sentakki-release" href="https://github.com/LumpBloom7/sentakki/releases/">
+                                        <button id="sentakki-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="sentakki-download" href="https://github.com/LumpBloom7/sentakki/releases/latest">
+                                        <button id="sentakki-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://rulesets.info/posts/tau">tau</a></td>
+                <td>✅</td>
+                <td>Everything works</td>
+                <td id="tau-version">Fetching data...</td>
+                <td>
+                    <button id="tau-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#tauModal" disabled>
+                        Fetching data...
+                    </button>
+  
+                    <div class="modal fade" id="tauModal" tabindex="-1" aria-labelledby="tauModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="tau-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="tau-changelog">Fetching changelog...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="tau-size">Size : Fetching...</p>
+                                        <p id="tau-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="tau-release" href="https://github.com/Altenhh/tau/releases/">
+                                        <button id="tau-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="tau-download" href="https://github.com/Altenhh/tau/releases/latest">
+                                        <button id="tau-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://rulesets.info/posts/rush">rush!</a></td>
+                <td>✅</td>
+                <td>Everything works</td>
+                <td id="rush-version">Fetching data...</td>
+                <td>
+                    <button id="rush-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#rushModal" disabled>
+                        Fetching data...
+                    </button>
+  
+                    <div class="modal fade" id="rushModal" tabindex="-1" aria-labelledby="rushModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="rush-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="rush-changelog">Fetching changelog...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="rush-size">Size : Fetching...</p>
+                                        <p id="rush-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="rush-release" href="https://github.com/Beamographic/rush/releases/">
+                                        <button id="rush-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="rush-download" href="https://github.com/Beamographic/rush/releases/latest">
+                                        <button id="rush-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://rulesets.info/posts/swing">swing</a></td>
+                <td>✅</td>
+                <td>Everything works</td>
+                <td id="swing-version">Fetching data...</td>
+                <td>
+                    <button id="swing-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#swingModal" disabled>
+                        Fetching data...
+                    </button>
+  
+                    <div class="modal fade" id="swingModal" tabindex="-1" aria-labelledby="swingModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="swing-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="swing-changelog">Fetching changelog...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="swing-size">Size : Fetching...</p>
+                                        <p id="swing-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="swing-release" href="https://github.com/EVAST9919/lazer-swing/releases/">
+                                        <button id="swing-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="swing-download" href="https://github.com/EVAST9919/lazer-swing/releases/latest">
+                                        <button id="swing-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://rulesets.info/posts/hishigata">hishigata</a></td>
+                <td>✅</td>
+                <td>Everything works</td>
+                <td id="hishigata-version">Fetching data...</td>
+                <td>
+                    <button id="hishigata-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#hishigataModal" disabled>
+                        Fetching data...
+                    </button>
+  
+                    <div class="modal fade" id="hishigataModal" tabindex="-1" aria-labelledby="hishigataModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="hishigata-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="hishigata-changelog">Fetching changelog...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="hishigata-size">Size : Fetching...</p>
+                                        <p id="hishigata-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="hishigata-release" href="https://github.com/LumpBloom7/hishigata/releases/">
+                                        <button id="hishigata-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="hishigata-download" href="https://github.com/LumpBloom7/hishigata/releases/latest">
+                                        <button id="hishigata-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://rulesets.info/posts/soyokaze">soyokaze!</a></td>
+                <td>⚠️</td>
+                <td>Autoplay is broke (cannot use this mod)</td>
+                <td id="soyokaze-version">Fetching data...</td>
+                <td>
+                    <button id="soyokaze-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#soyokazeModal" disabled>
+                        Fetching data...
+                    </button>
+  
+                    <div class="modal fade" id="soyokazeModal" tabindex="-1" aria-labelledby="soyokazeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="soyokaze-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="soyokaze-changelog">Fetching changelog...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="soyokaze-size">Size : Fetching...</p>
+                                        <p id="soyokaze-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="soyokaze-release" href="https://github.com/goodtrailer/soyokaze/releases/">
+                                        <button id="soyokaze-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="soyokaze-download" href="https://github.com/goodtrailer/soyokaze/releases/latest">
+                                        <button id="soyokaze-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://rulesets.info/posts/osu-diva">osu!DIVA</a></td>
+                <td>⚠️</td>
+                <td>Autoplay is broke (cannot use this mod)</td>
+                <td id="diva-version">Fetching data...</td>
+                <td>
+                    <button id="diva-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#divaModal" disabled>
+                        Fetching data...
+                    </button>
+  
+                    <div class="modal fade" id="divaModal" tabindex="-1" aria-labelledby="divaModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="diva-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="diva-changelog">Fetching changelog...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="diva-size">Size : Fetching...</p>
+                                        <p id="diva-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="diva-release" href="https://github.com/Thesola10/osu-DIVA/releases/">
+                                        <button id="diva-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="diva-download" href="https://github.com/Thesola10/osu-DIVA/releases/latest">
+                                        <button id="diva-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://rulesets.info/posts/touhosu">touhosu</a></td>
+                <td>✅</td>
+                <td>Everything works</td>
+                <td id="touhosu-version">Fetching data...</td>
+                <td>
+                    <button id="touhosu-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#touhosuModal" disabled>
+                        Fetching data...
+                    </button>
+  
+                    <div class="modal fade" id="touhosuModal" tabindex="-1" aria-labelledby="touhosuModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="touhosu-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="touhosu-changelog">Fetching changelog...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="touhosu-size">Size : Fetching...</p>
+                                        <p id="touhosu-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="touhosu-release" href="https://github.com/EVAST9919/touhosu/releases/">
+                                        <button id="touhosu-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="touhosu-download" href="https://github.com/EVAST9919/touhosu/releases/latest">
+                                        <button id="touhosu-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://rulesets.info/posts/solosu">solosu</a></td>
+                <td>⚠️</td>
+                <td>Autoplay is broke (cannot use this mod)</td>
+                <td>-</td>
+                <td>
+                    <button id="solosu-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#solosuModal">
                       detail & download
-                  </button>
-
-                  <div class="modal fade" id="yosoModal" tabindex="-1" aria-labelledby="yosoModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h3 id="yoso-title" class="modal-title">Yoso changelog</h3>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Changelog</h4>
-                                  <p id="yoso-changelog">Fixed autoplay doesn't work after latest lazer update</p>
-                                  <h4>File Detail</h4>
-                                  <p id="yoso-size">Size : 176640 bytes</p>
-                                  <p id="yoso-time">Update Time : 2021-05-13T16:48:00Z</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a id="yoso-download" href="https://www.patreon.com/posts/yoso-2021-513-0-51215430">
-                                      <button id="yoso-download-button" type="button" class="btn btn-primary">Go to Patreon</button>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </td>
-              </td>
-          </tr>
-          </tbody>
-      </table>
-
-      <button id="lazer-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#lazerModal" disabled>Fetching data...</button>
-
-<!-- raw HTML omitted -->
-
-  </div>
-
-</article>
+                </button>
+  
+                    <div class="modal fade" id="solosuModal" tabindex="-1" aria-labelledby="solosuModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="solosu-title" class="modal-title">Solosu changelog</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="solosu-changelog">-</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="solosu-size">Size : 87040 bytes</p>
+                                        <p id="solosu-time">Update Time : 2021-04-28T23:00:50Z</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button id="solosu-release-button" type="button" class="btn btn-primary" disabled>Release Page</button>
+                                    <a id="solosu-download" href="https://cdn.discordapp.com/attachments/719981519007121498/837055801507708948/osu.Game.Rulesets.Solosu.dll">
+                                        <button id="solosu-download-button" type="button" class="btn btn-primary">Download</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://rulesets.info/posts/yoso">yoso</a></td>
+                <td>✅</td>
+                <td>Everything works</td>
+                <td>2021.513.0</td>
+  <!--              <td><a href="https://www.patreon.com/posts/yoso-2021-513-0-51215430">↗️ Patreon</a></td>-->
+                <td>
+                    <button id="yoso-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#yosoModal">
+                        detail & download
+                    </button>
+  
+                    <div class="modal fade" id="yosoModal" tabindex="-1" aria-labelledby="yosoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="yoso-title" class="modal-title">Yoso changelog</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="yoso-changelog">Fixed autoplay doesn't work after latest lazer update</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="yoso-size">Size : 176640 bytes</p>
+                                        <p id="yoso-time">Update Time : 2021-05-13T16:48:00Z</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="yoso-download" href="https://www.patreon.com/posts/yoso-2021-513-0-51215430">
+                                        <button id="yoso-download-button" type="button" class="btn btn-primary">Go to Patreon</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+  
+        <button id="lazer-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#lazerModal" disabled>Fetching data...</button>
+  
+  <!-- raw HTML omitted -->
+  
+    </div>
+  
+  </article>
 </div>
 <div class="col-md-4 mt20">
         <div class="post-img">
