@@ -328,4 +328,4 @@ document.getElementById("yoso-release-date").innerHTML = "Latest release : " + f
 
 changeProgressBar(100);
 changeProgressText("Complete!");
-window.setTimeout("deleteProgressBar();", 2000);
+window.setTimeout("deleteProgressBar();", 1000);
