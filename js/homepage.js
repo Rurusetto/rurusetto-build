@@ -186,7 +186,8 @@ async function callCytosu(url) {
     // console.log(Data);
     if (response) {
         console.log("cytosu Complete")
-        let assets = Data['assets'][0]
+        let latestRelease = Data[0];
+        let assets = latestRelease['assets'][0]
         let updateDate = new Date( Date.parse(assets.updated_at) )
         document.getElementById("cytosu-release-date").innerText = "Latest release : " + formatDate(updateDate) ;
     }
@@ -203,7 +204,8 @@ async function callRush(url) {
     // console.log(Data);
     if (response) {
         console.log("rush Complete")
-        let assets = Data['assets'][0]
+        let latestRelease = Data[0];
+        let assets = latestRelease['assets'][0]
         let updateDate = new Date( Date.parse(assets.updated_at) )
         document.getElementById("rush-release-date").innerText = "Latest release : " + formatDate(updateDate) ;
     }
