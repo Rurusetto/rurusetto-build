@@ -13,28 +13,6 @@ let md = new Remarkable({
     quotes: '“”‘’'
 });
 
-function humanFileSize(bytes, si=false, dp=1) {
-    const thresh = si ? 1000 : 1024;
-
-    if (Math.abs(bytes) < thresh) {
-        return bytes + ' B';
-    }
-
-    const units = si
-        ? ['kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
-        : ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'];
-    let u = -1;
-    const r = 10**dp;
-
-    do {
-        bytes /= thresh;
-        ++u;
-    } while (Math.round(Math.abs(bytes) * r) / r >= thresh && u < units.length - 1);
-
-
-    return bytes.toFixed(dp) + ' ' + units[u];
-}
-
 function prettifyBytes ( bytes ) {
     const units = [ 'B', 'kiB', 'MiB', 'GiB', 'TiB', 'PiB' ];
 
@@ -43,7 +21,7 @@ function prettifyBytes ( bytes ) {
         ? 0
         : Math.min( units.length - 1, Math.floor( Math.log( bytes / offset ) / Math.log( 1024 ) ) );
 
-    return `${Math.round( bytes / 1024 ** unit )}${units[ unit ]}`;
+    return `${Math.round( bytes / 1024 ** unit )} ${units[ unit ]}`;
 }
 
 function formatDate ( date ) {
@@ -103,7 +81,7 @@ async function callTouhosu(url) {
         document.getElementById("touhosu-download").href = assets.browser_download_url;
         document.getElementById("touhosu-download-button").innerHTML = "Download";
         // document.getElementById("touhosu-count").innerHTML = "Download Count : " + assets.download_count;
-        document.getElementById("touhosu-size").innerHTML = "Size : " + humanFileSize(assets.size, true, 2);
+        document.getElementById("touhosu-size").innerHTML = "Size : " + prettifyBytes(assets.size);
         document.getElementById("touhosu-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
     }
 }
@@ -132,7 +110,7 @@ async function callMvis(url) {
         document.getElementById("mvis-download").href = assets.browser_download_url
         document.getElementById("mvis-download-button").innerHTML = "Download";
         // document.getElementById("mvis-count").innerHTML = "Download Count : " + assets.download_count;
-        document.getElementById("mvis-size").innerHTML = "Size : " + humanFileSize(assets.size, true, 2);
+        document.getElementById("mvis-size").innerHTML = "Size : " + prettifyBytes(assets.size);
         document.getElementById("mvis-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
     }
     
@@ -160,7 +138,7 @@ async function callBosu(url) {
         document.getElementById("bosu-download").href = assets.browser_download_url
         document.getElementById("bosu-download-button").innerHTML = "Download";
         // document.getElementById("bosu-count").innerHTML = "Download Count : " + assets.download_count;
-        document.getElementById("bosu-size").innerHTML = "Size : " + humanFileSize(assets.size, true, 2);
+        document.getElementById("bosu-size").innerHTML = "Size : " + prettifyBytes(assets.size);
         document.getElementById("bosu-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
     }
 }
@@ -187,7 +165,7 @@ async function callSentakki(url) {
         document.getElementById("sentakki-download").href = assets.browser_download_url
         document.getElementById("sentakki-download-button").innerHTML = "Download";
         // document.getElementById("sentakki-count").innerHTML = "Download Count : " + assets.download_count;
-        document.getElementById("sentakki-size").innerHTML = "Size : " + humanFileSize(assets.size, true, 2);
+        document.getElementById("sentakki-size").innerHTML = "Size : " + prettifyBytes(assets.size);
         document.getElementById("sentakki-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
     }
 }
@@ -214,7 +192,7 @@ async function callSwing(url) {
         document.getElementById("swing-download").href = assets.browser_download_url
         document.getElementById("swing-download-button").innerHTML = "Download";
         // document.getElementById("swing-count").innerHTML = "Download Count : " + assets.download_count;
-        document.getElementById("swing-size").innerHTML = "Size : " + humanFileSize(assets.size, true, 2);
+        document.getElementById("swing-size").innerHTML = "Size : " + prettifyBytes(assets.size);
         document.getElementById("swing-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
     }
 }
@@ -241,7 +219,7 @@ async function callTau(url) {
         document.getElementById("tau-download").href = assets.browser_download_url
         document.getElementById("tau-download-button").innerHTML = "Download";
         // document.getElementById("tau-count").innerHTML = "Download Count : " + assets.download_count;
-        document.getElementById("tau-size").innerHTML = "Size : " + humanFileSize(assets.size, true, 2);
+        document.getElementById("tau-size").innerHTML = "Size : " + prettifyBytes(assets.size);
         document.getElementById("tau-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
     }
 }
@@ -269,7 +247,7 @@ async function callTau(url) {
                 document.getElementById("hitokori-download").href = assets.browser_download_url
                 document.getElementById("hitokori-download-button").innerHTML = "Download";
                 // document.getElementById("hitokori-count").innerHTML = "Download Count : " + assets.download_count;
-                document.getElementById("hitokori-size").innerHTML = "Size : " + humanFileSize(assets.size, true, 2);
+                document.getElementById("hitokori-size").innerHTML = "Size : " + prettifyBytes(assets.size);
                 document.getElementById("hitokori-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
             }
         }
@@ -296,7 +274,7 @@ async function callTau(url) {
                 document.getElementById("soyokaze-download").href = assets.browser_download_url
                 document.getElementById("soyokaze-download-button").innerHTML = "Download";
                 // document.getElementById("soyokaze-count").innerHTML = "Download Count : " + assets.download_count;
-                document.getElementById("soyokaze-size").innerHTML = "Size : " + humanFileSize(assets.size, true, 2);
+                document.getElementById("soyokaze-size").innerHTML = "Size : " + prettifyBytes(assets.size);
                 document.getElementById("soyokaze-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
             }
         }
@@ -323,7 +301,7 @@ async function callTau(url) {
                 document.getElementById("cytosu-download").href = assets.browser_download_url
                 document.getElementById("cytosu-download-button").innerHTML = "Download";
                 // document.getElementById("cytosu-count").innerHTML = "Download Count : " + assets.download_count;
-                document.getElementById("cytosu-size").innerHTML = "Size : " + humanFileSize(assets.size, true, 2);
+                document.getElementById("cytosu-size").innerHTML = "Size : " + prettifyBytes(assets.size);
                 document.getElementById("cytosu-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
             }
         }
@@ -350,7 +328,7 @@ async function callTau(url) {
                 document.getElementById("rush-download").href = assets.browser_download_url
                 document.getElementById("rush-download-button").innerHTML = "Download";
                 // document.getElementById("rush-count").innerHTML = "Download Count : " + assets.download_count;
-                document.getElementById("rush-size").innerHTML = "Size : " + humanFileSize(assets.size, true, 2);
+                document.getElementById("rush-size").innerHTML = "Size : " + prettifyBytes(assets.size);
                 document.getElementById("rush-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
             }
         }
@@ -377,7 +355,7 @@ async function callTau(url) {
                 document.getElementById("diva-download").href = assets.browser_download_url
                 document.getElementById("diva-download-button").innerHTML = "Download";
                 // document.getElementById("diva-count").innerHTML = "Download Count : " + assets.download_count;
-                document.getElementById("diva-size").innerHTML = "Size : " + humanFileSize(assets.size, true, 2);
+                document.getElementById("diva-size").innerHTML = "Size : " + prettifyBytes(assets.size);
                 document.getElementById("diva-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
             }
         }
@@ -404,7 +382,7 @@ async function callTau(url) {
                 document.getElementById("hishigata-download").href = assets.browser_download_url
                 document.getElementById("hishigata-download-button").innerHTML = "Download";
                 // document.getElementById("hishigata-count").innerHTML = "Download Count : " + assets.download_count;
-                document.getElementById("hishigata-size").innerHTML = "Size : " + humanFileSize(assets.size, true, 2);
+                document.getElementById("hishigata-size").innerHTML = "Size : " + prettifyBytes(assets.size);
                 document.getElementById("hishigata-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
             }
         }
@@ -533,4 +511,5 @@ changeProgressText("Complete!");
 window.setTimeout("deleteProgressBar();", 2000);
 
 let date = new Date();
+// document.getElementById('last-update').innerHTML = "Last Update : " + date;
 document.getElementById('last-update').innerHTML = "Last Update : " + formatDate(date);
