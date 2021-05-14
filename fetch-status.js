@@ -13,15 +13,16 @@ let md = new Remarkable({
     quotes: '“”‘’'
 });
 
+// Function by Peri
+
 function prettifyBytes ( bytes ) {
     const units = [ 'B', 'kiB', 'MiB', 'GiB', 'TiB', 'PiB' ];
 
-    const offset = 5; // this is to make the smallest displayed number, unless bytes is less than that
-    const unit = bytes <= offset
+    const unit = bytes <= 0
         ? 0
-        : Math.min( units.length - 1, Math.floor( Math.log( bytes / offset ) / Math.log( 1024 ) ) );
+        : Math.min( units.length - 1, Math.floor( Math.log( bytes ) / Math.log( 1024 ) ) );
 
-    return `${Math.round( bytes / 1024 ** unit )} ${units[ unit ]}`;
+    return `${Math.round( bytes / 1024 ** unit * 100 ) / 100} ${units[ unit ]}`;
 }
 
 function formatDate ( date ) {
