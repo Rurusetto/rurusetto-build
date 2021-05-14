@@ -411,8 +411,8 @@ async function callLazer(url) {
         document.getElementById("lazer-download-mac").href = assetsMac.browser_download_url
         document.getElementById("lazer-download-windows-button").innerHTML = "Download on Windows";
         document.getElementById("lazer-download-mac-button").innerHTML = "Download on MacOS";
-        document.getElementById("lazer-size-windows").innerHTML = "Size : " + humanFileSize(assetsWindows.size, true, 2);
-        document.getElementById("lazer-size-mac").innerHTML = "Size : " + humanFileSize(assetsMac.size, true, 2);
+        document.getElementById("lazer-size-windows").innerHTML = "Size : " + prettifyBytes(assetsWindows.size);
+        document.getElementById("lazer-size-mac").innerHTML = "Size : " + prettifyBytes(assetsMac.size);
     }
 }
 
@@ -499,8 +499,8 @@ percentNow += progressBarUp;
 
 callLazer("https://api.github.com/repos/ppy/osu/releases/latest");
 
-document.getElementById("yoso-size").innerHTML = "Size : " + humanFileSize(176640, true, 2)
-document.getElementById("solosu-size").innerHTML = "Size : " + humanFileSize(87040, true, 2)
+document.getElementById("yoso-size").innerHTML = "Size : " + prettifyBytes(176640)
+document.getElementById("solosu-size").innerHTML = "Size : " + prettifyBytes(87040)
 let solosuDate = new Date(Date.parse('2021-04-28T23:00:50Z'))
 let yosoDate = new Date(Date.parse('2021-05-13T16:48:00Z'))
 document.getElementById("solosu-time").innerHTML = "Latest update : " + formatDate(solosuDate) ;
