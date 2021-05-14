@@ -54,8 +54,8 @@ async function callAPI(url, rulesetsName) {
         // console.log(Data);
         if (response) {
             console.log(rulesetsName + " Complete")
-            let latestRelease = Data;
-            let assets = Data['assets'][0]
+            let latestRelease = Data[0];
+            let assets = latestRelease['assets'][0]
             let updateDate = new Date( Date.parse(assets.updated_at) )
             document.getElementById('date').innerHTML = "Latest release at " + updateDate;
             document.getElementById('version').innerHTML = "Last Update : " + latestRelease.name + " (" + formatDate(updateDate) + ")";
