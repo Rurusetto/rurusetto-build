@@ -434,6 +434,19 @@ function deleteProgressBar () {
     document.getElementById("fetch-progress").innerHTML = "";
 }
 
+function openProgressBar() {
+    document.getElementById("fetch-progress").innerHTML = `<p id="progresstext">
+        Fetching data from GitHub API...
+    </p>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped" style="min-width: 20px;"></div>
+    </div>`
+}
+
+function disableRefresh(mode) {
+    document.getElementById('refresh-button').disabled = mode;
+}
+
 let percentNow = 0;
 
 console.log("Start fetching...")
@@ -514,3 +527,88 @@ window.setTimeout("deleteProgressBar();", 2000);
 let date = new Date();
 // document.getElementById('last-update').innerHTML = "Last Update : " + date;
 document.getElementById('last-update').innerHTML = "Last Update : " + formatDate(date);
+
+disableRefresh(false);
+
+function refresh() {
+    disableRefresh(true);
+
+    openProgressBar();
+    changeProgressText("Fetching data from GitHub API...");
+    let refreshPercentNow = 0;
+
+    console.log("Start fetching...")
+
+    changeProgressText("Fetch Touhosu releases...");
+    callTouhosu("https://api.github.com/repos/EVAST9919/touhosu/releases/latest")
+    changeProgressBar(refreshPercentNow);
+    console.log("refresh = " + refreshPercentNow)
+    refreshPercentNow += progressBarUp;
+
+    changeProgressText("Fetch mvis releases...");
+    callMvis("https://api.github.com/repos/EVAST9919/lazer-m-vis/releases/latest");
+    changeProgressBar(refreshPercentNow);
+    console.log("refresh = " + refreshPercentNow)
+    refreshPercentNow += progressBarUp;
+
+    changeProgressText("Fetch bosu releases...");
+    callBosu("https://api.github.com/repos/EVAST9919/bosu/releases/latest");
+    changeProgressBar(refreshPercentNow);
+    refreshPercentNow += progressBarUp;
+
+    changeProgressText("Fetch sentakki releases...");
+    callSentakki("https://api.github.com/repos/LumpBloom7/sentakki/releases/latest");
+    changeProgressBar(refreshPercentNow);
+    refreshPercentNow += progressBarUp;
+
+    changeProgressText("Fetch swing releases...");
+    callSwing("https://api.github.com/repos/EVAST9919/lazer-swing/releases/latest");
+    changeProgressBar(refreshPercentNow);
+    refreshPercentNow += progressBarUp;
+
+    changeProgressText("Fetch tau releases...");
+    callTau("https://api.github.com/repos/Altenhh/tau/releases/latest");
+    changeProgressBar(refreshPercentNow);
+    refreshPercentNow += progressBarUp;
+
+    changeProgressText("Fetch hitokori releases...");
+    callHitokori("https://api.github.com/repos/Flutterish/Hitokori/releases/latest");
+    changeProgressBar(refreshPercentNow);
+    refreshPercentNow += progressBarUp;
+
+    changeProgressText("Fetch soyokaze releases...");
+    callSoyokaze("https://api.github.com/repos/goodtrailer/soyokaze/releases/latest");
+    changeProgressBar(refreshPercentNow);
+    refreshPercentNow += progressBarUp;
+
+    changeProgressText("Fetch cytosu releases...");
+    callCytosu("https://api.github.com/repos/GSculerlor/Cytosu/releases");
+    changeProgressBar(refreshPercentNow);
+    refreshPercentNow += progressBarUp;
+
+    changeProgressText("Fetch rush releases...");
+    callRush("https://api.github.com/repos/Beamographic/rush/releases");
+    changeProgressBar(refreshPercentNow);
+    refreshPercentNow += progressBarUp;
+
+    changeProgressText("Fetch osu!DIVA releases...");
+    callDiva("https://api.github.com/repos/Thesola10/osu-DIVA/releases/latest");
+    changeProgressBar(refreshPercentNow);
+    refreshPercentNow += progressBarUp;
+
+    changeProgressText("Fetch hishigata releases...");
+    callHishigata("https://api.github.com/repos/LumpBloom7/hishigata/releases/latest");
+    changeProgressBar(refreshPercentNow);
+    refreshPercentNow += progressBarUp;
+
+    callLazer("https://api.github.com/repos/ppy/osu/releases/latest");
+
+    changeProgressBar(100);
+    changeProgressText("Complete!");
+    window.setTimeout("deleteProgressBar();", 2000);
+
+    let date = new Date();
+    document.getElementById('last-update').innerHTML = "Last Update : " + formatDate(date);
+
+    disableRefresh(false);
+}
