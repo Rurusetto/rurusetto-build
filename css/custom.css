@@ -68,6 +68,10 @@ body.dark-mode button.btn.btn-secondary {
   color: #000;
 }
 
+div.mono-font {
+  font-family: 'Courier New', monospace;
+}
+
 body.dark-mode div.mono-font {
   font-family: 'Courier New', monospace;
 }
