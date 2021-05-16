@@ -801,6 +801,45 @@
                 </td>
             </tr>
             <tr>
+                <td><a>karaoke</a></td>
+                <td>❌</td>
+                <td>Cannot import</td>
+                <td id="karaoke-version">Fetching data...</td>
+                <td>
+                    <button id="karaoke-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#karaokeModal" disabled>
+                        Fetching data...
+                    </button>
+  
+                    <div class="modal fade" id="karaokeModal" tabindex="-1" aria-labelledby="karaokeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="karaoke-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="karaoke-changelog">Fetching changelog...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="karaoke-size">Size : Fetching...</p>
+                                        <p id="karaoke-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="karaoke-release" href="https://github.com/karaoke-dev/karaoke/releases/">
+                                        <button id="karaoke-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="karaoke-download" href="https://github.com/karaoke-dev/karaoke/releases/latest">
+                                        <button id="karaoke-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
                 <td><a href="https://rulesets.info/posts/solosu">solosu</a></td>
                 <td>⚠️</td>
                 <td>Autoplay is broke (cannot use this mod)</td>
