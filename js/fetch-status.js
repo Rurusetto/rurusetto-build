@@ -415,6 +415,33 @@ async function callKaraoke(url) {
     }
 }
 
+// gamebosu
+async function callGamebosu(url) {
+
+    // Storing response
+    const response = await fetch(url);
+
+    // Storing data in form of JSON
+    let Data = await response.json();
+    // console.log(Data);
+    if (response) {
+        console.log("gamebosu Complete")
+        let latestRelease = Data;
+        let assets = Data['assets'][0]
+        let updateDate = new Date( Date.parse(assets.updated_at) )
+        document.getElementById("gamebosu-button").innerHTML = "detail & download";
+        document.getElementById("gamebosu-button").disabled = false;
+        document.getElementById("gamebosu-version").innerHTML = latestRelease.name;
+        document.getElementById("gamebosu-title").innerHTML = latestRelease.name + " changelog & file detail";
+        document.getElementById("gamebosu-changelog").innerHTML = md.render(latestRelease.body);
+        document.getElementById("gamebosu-download").href = assets.browser_download_url
+        document.getElementById("gamebosu-download-button").innerHTML = "Download";
+        // document.getElementById("gamebosu-count").innerHTML = "Download Count : " + assets.download_count;
+        document.getElementById("gamebosu-size").innerHTML = "Size : " + prettifyBytes(assets.size);
+        document.getElementById("gamebosu-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
+    }
+}
+
 // osu!lazer
 async function callLazer(url) {
 
@@ -446,7 +473,7 @@ async function callLazer(url) {
 
 
 // Set rulesets number to get a progress bar work
-const rulesetNumber = 13;
+const rulesetNumber = 14;
 const progressBarUp = 100/rulesetNumber;
 
 function changeProgressBar(percent){
@@ -539,7 +566,12 @@ changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
 changeProgressText("Fetch karaoke releases...");
-callHishigata("https://api.github.com/repos/karaoke-dev/karaoke/releases/latest");
+callKaraoke("https://api.github.com/repos/karaoke-dev/karaoke/releases/latest");
+changeProgressBar(percentNow);
+percentNow += progressBarUp;
+
+changeProgressText("Fetch gamebosu releases...");
+callGamebosu("https://api.github.com/repos/Game4all/gamebosu/releases/latest");
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
@@ -630,6 +662,16 @@ function refresh() {
     callHishigata("https://api.github.com/repos/LumpBloom7/hishigata/releases/latest");
     changeProgressBar(refreshPercentNow);
     refreshPercentNow += progressBarUp;
+
+    changeProgressText("Fetch karaoke releases...");
+    callKaraoke("https://api.github.com/repos/karaoke-dev/karaoke/releases/latest");
+    changeProgressBar(percentNow);
+    percentNow += progressBarUp;
+
+    changeProgressText("Fetch gamebosu releases...");
+    callGamebosu("https://api.github.com/repos/Game4all/gamebosu/releases/latest");
+    changeProgressBar(percentNow);
+    percentNow += progressBarUp;
 
     callLazer("https://api.github.com/repos/ppy/osu/releases/latest");
 
