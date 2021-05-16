@@ -388,6 +388,33 @@ async function callTau(url) {
             }
         }
 
+// karaoke
+async function callKaraoke(url) {
+
+    // Storing response
+    const response = await fetch(url);
+
+    // Storing data in form of JSON
+    let Data = await response.json();
+    // console.log(Data);
+    if (response) {
+        console.log("karaoke Complete")
+        let latestRelease = Data;
+        let assets = Data['assets'][0]
+        let updateDate = new Date( Date.parse(assets.updated_at) )
+        document.getElementById("karaoke-button").innerHTML = "detail & download";
+        document.getElementById("karaoke-button").disabled = false;
+        document.getElementById("karaoke-version").innerHTML = latestRelease.name;
+        document.getElementById("karaoke-title").innerHTML = latestRelease.name + " changelog & file detail";
+        document.getElementById("karaoke-changelog").innerHTML = md.render(latestRelease.body);
+        document.getElementById("karaoke-download").href = assets.browser_download_url
+        document.getElementById("karaoke-download-button").innerHTML = "Download";
+        // document.getElementById("karaoke-count").innerHTML = "Download Count : " + assets.download_count;
+        document.getElementById("karaoke-size").innerHTML = "Size : " + prettifyBytes(assets.size);
+        document.getElementById("karaoke-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
+    }
+}
+
 // osu!lazer
 async function callLazer(url) {
 
@@ -419,7 +446,7 @@ async function callLazer(url) {
 
 
 // Set rulesets number to get a progress bar work
-const rulesetNumber = 12;
+const rulesetNumber = 13;
 const progressBarUp = 100/rulesetNumber;
 
 function changeProgressBar(percent){
@@ -511,6 +538,11 @@ callHishigata("https://api.github.com/repos/LumpBloom7/hishigata/releases/latest
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
+changeProgressText("Fetch karaoke releases...");
+callHishigata("https://api.github.com/repos/karaoke-dev/karaoke/releases/latest");
+changeProgressBar(percentNow);
+percentNow += progressBarUp;
+
 callLazer("https://api.github.com/repos/ppy/osu/releases/latest");
 
 document.getElementById("yoso-size").innerHTML = "Size : " + prettifyBytes(176640)
@@ -542,13 +574,11 @@ function refresh() {
     changeProgressText("Fetch Touhosu releases...");
     callTouhosu("https://api.github.com/repos/EVAST9919/touhosu/releases/latest")
     changeProgressBar(refreshPercentNow);
-    console.log("refresh = " + refreshPercentNow)
     refreshPercentNow += progressBarUp;
 
     changeProgressText("Fetch mvis releases...");
     callMvis("https://api.github.com/repos/EVAST9919/lazer-m-vis/releases/latest");
     changeProgressBar(refreshPercentNow);
-    console.log("refresh = " + refreshPercentNow)
     refreshPercentNow += progressBarUp;
 
     changeProgressText("Fetch bosu releases...");
