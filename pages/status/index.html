@@ -840,6 +840,45 @@
                 </td>
             </tr>
             <tr>
+                <td><a>gamebosu</a></td>
+                <td>✅</td>
+                <td>Everything works</td>
+                <td id="gamebosu-version">Fetching data...</td>
+                <td>
+                    <button id="gamebosu-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#gamebosuModal" disabled>
+                        Fetching data...
+                    </button>
+  
+                    <div class="modal fade" id="gamebosuModal" tabindex="-1" aria-labelledby="gamebosuModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="gamebosu-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="gamebosu-changelog">Fetching changelog...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="gamebosu-size">Size : Fetching...</p>
+                                        <p id="gamebosu-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="gamebosu-release" href="https://github.com/Game4all/gamebosu/releases/">
+                                        <button id="gamebosu-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="gamebosu-download" href="https://github.com/Game4all/gamebosu/releases/latest">
+                                        <button id="gamebosu-download-button" type="button" class="btn btn-primary">Fetching download link...</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
                 <td><a href="https://rulesets.info/posts/solosu">solosu</a></td>
                 <td>⚠️</td>
                 <td>Autoplay is broke (cannot use this mod)</td>
