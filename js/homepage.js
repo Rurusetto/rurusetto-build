@@ -43,7 +43,7 @@ async function callTouhosu(url) {
 
     // Storing data in form of JSON
     let Data = await response.json();
-    console.log(Data);
+    // console.log(Data);
     if (response) {
         console.log("touhosu Complete")
         let assets = Data['assets'][0]
