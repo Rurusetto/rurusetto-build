@@ -245,8 +245,25 @@ async function callHishigata(url) {
     }
 }
 
+// Hishigata
+async function callGamebosu(url) {
+
+    // Storing response
+    const response = await fetch(url);
+
+    // Storing data in form of JSON
+    let Data = await response.json();
+    // console.log(Data);
+    if (response) {
+        console.log("gamebosu Complete")
+        let assets = Data['assets'][0]
+        let updateDate = new Date( Date.parse(assets.updated_at) )
+        document.getElementById("gamebosu-release-date").innerText = "Latest release : " + formatDate(updateDate) ;
+    }
+}
+
 // Set rulesets number to get a progress bar work
-const rulesetNumber = 12;
+const rulesetNumber = 13;
 const progressBarUp = 100/rulesetNumber;
 
 function changeProgressBar(percent){
@@ -320,6 +337,11 @@ percentNow += progressBarUp;
 
 changeProgressText("Fetch hishigata releases...");
 callHishigata("https://api.github.com/repos/LumpBloom7/hishigata/releases/latest");
+changeProgressBar(percentNow);
+percentNow += progressBarUp;
+
+changeProgressText("Fetch gamebosu releases...");
+callGamebosu("https://api.github.com/repos/Game4all/gamebosu/releases/latest");
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
