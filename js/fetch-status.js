@@ -456,6 +456,7 @@ async function callLazer(url) {
         let latestRelease = Data;
         let assetsWindows = Data['assets'][0]
         let assetsMac = Data['assets'][1]
+        let assetsAndroid = Data['assets'][10]
         let updateDate = new Date( Date.parse(latestRelease.published_at) )
         document.getElementById("lazer-button").innerHTML = "download osu!lazer";
         document.getElementById("lazer-button").disabled = false;
@@ -464,10 +465,13 @@ async function callLazer(url) {
         document.getElementById("lazer-changelog").innerHTML = md.render(latestRelease.body);
         document.getElementById("lazer-download-windows").href = assetsWindows.browser_download_url
         document.getElementById("lazer-download-mac").href = assetsMac.browser_download_url
+        document.getElementById("lazer-download-android").href = assetsAndroid.browser_download_url
         document.getElementById("lazer-download-windows-button").innerHTML = "Download on Windows";
         document.getElementById("lazer-download-mac-button").innerHTML = "Download on MacOS";
+        document.getElementById("lazer-download-android-button").innerHTML = "Download on Android";
         document.getElementById("lazer-size-windows").innerHTML = "Size : " + prettifyBytes(assetsWindows.size);
         document.getElementById("lazer-size-mac").innerHTML = "Size : " + prettifyBytes(assetsMac.size);
+        document.getElementById("lazer-size-android").innerHTML = "Size : " + prettifyBytes(assetsAndroid.size);
     }
 }
 
