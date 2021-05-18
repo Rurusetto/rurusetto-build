@@ -43,7 +43,7 @@ async function callTouhosu(url) {
 
     // Storing data in form of JSON
     let Data = await response.json();
-    console.log(Data);
+    // console.log(Data);
     if (response) {
         console.log("touhosu Complete")
         let assets = Data['assets'][0]
@@ -245,8 +245,25 @@ async function callHishigata(url) {
     }
 }
 
+// Hishigata
+async function callGamebosu(url) {
+
+    // Storing response
+    const response = await fetch(url);
+
+    // Storing data in form of JSON
+    let Data = await response.json();
+    // console.log(Data);
+    if (response) {
+        console.log("gamebosu Complete")
+        let assets = Data['assets'][0]
+        let updateDate = new Date( Date.parse(assets.updated_at) )
+        document.getElementById("gamebosu-release-date").innerText = "Latest release : " + formatDate(updateDate) ;
+    }
+}
+
 // Set rulesets number to get a progress bar work
-const rulesetNumber = 12;
+const rulesetNumber = 13;
 const progressBarUp = 100/rulesetNumber;
 
 function changeProgressBar(percent){
@@ -323,8 +340,13 @@ callHishigata("https://api.github.com/repos/LumpBloom7/hishigata/releases/latest
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
+changeProgressText("Fetch gamebosu releases...");
+callGamebosu("https://api.github.com/repos/Game4all/gamebosu/releases/latest");
+changeProgressBar(percentNow);
+percentNow += progressBarUp;
+
 let solosuDate = new Date(Date.parse('2021-04-28T23:00:50Z'))
-let yosoDate = new Date(Date.parse('2021-05-13T16:48:00Z'))
+let yosoDate = new Date(Date.parse('2021-05-17T22:08:00Z'))
 document.getElementById("solosu-release-date").innerHTML = "Latest release : " + formatDate(solosuDate) ;
 document.getElementById("yoso-release-date").innerHTML = "Latest release : " + formatDate(yosoDate) ;
 
