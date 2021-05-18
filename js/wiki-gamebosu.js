@@ -75,8 +75,8 @@ function deleteProgressBar () {
     document.getElementById("fetch-progress").innerHTML = "";
 }
 
-let url = 'https://api.github.com/repos/LumpBloom7/hishigata/releases/latest'
-let rulesetsName = 'hishigata'
+let url = 'https://api.github.com/repos/Game4all/gamebosu/releases/latest'
+let rulesetsName = 'gamebosu'
 let progressText = document.getElementById('progresstext');
 
 console.log("Start fetching...")

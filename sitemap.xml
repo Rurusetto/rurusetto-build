@@ -2,20 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://rulesets.info/posts/hitokori/</loc>
+    <lastmod>2021-05-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://rulesets.info/posts/</loc>
-    <lastmod>2021-05-13T04:00:00+07:00</lastmod>
+    <lastmod>2021-05-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rulesets.info/</loc>
-    <lastmod>2021-05-13T04:00:00+07:00</lastmod>
+    <lastmod>2021-05-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rulesets.info/posts/tau/</loc>
+    <lastmod>2021-05-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rulesets.info/posts/touhosu/</loc>
-    <lastmod>2021-05-13T04:00:00+07:00</lastmod>
+    <lastmod>2021-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rulesets.info/posts/gamebosu/</loc>
+    <lastmod>2021-05-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rulesets.info/posts/yoso/</loc>
+    <lastmod>2021-05-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rulesets.info/posts/mvis/</loc>
     <lastmod>2021-05-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rulesets.info/posts/yoso/</loc>
-    <lastmod>2021-05-02T15:54:00+07:00</lastmod>
   </url><url>
     <loc>https://rulesets.info/posts/bosu/</loc>
     <lastmod>2021-05-02T00:00:00+00:00</lastmod>
@@ -26,14 +35,8 @@
     <loc>https://rulesets.info/posts/swing/</loc>
     <lastmod>2021-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rulesets.info/posts/tau/</loc>
-    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://rulesets.info/posts/solosu/</loc>
     <lastmod>2021-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rulesets.info/posts/hitokori/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rulesets.info/posts/soyokaze/</loc>
     <lastmod>2021-04-20T00:00:00+00:00</lastmod>
@@ -42,13 +45,13 @@
     <lastmod>2021-04-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rulesets.info/posts/rush/</loc>
-    <lastmod>2021-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rulesets.info/posts/osu-diva/</loc>
     <lastmod>2021-04-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rulesets.info/posts/hishigata/</loc>
-    <lastmod>2021-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rulesets.info/categories/</loc>
   </url><url>
