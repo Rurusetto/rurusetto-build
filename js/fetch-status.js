@@ -581,12 +581,14 @@ percentNow += progressBarUp;
 
 callLazer("https://api.github.com/repos/ppy/osu/releases/latest");
 
-document.getElementById("yoso-size").innerHTML = "Size : " + prettifyBytes(176640)
+document.getElementById("yoso-size").innerHTML = "Size : " + prettifyBytes(179200)
 document.getElementById("solosu-size").innerHTML = "Size : " + prettifyBytes(87040)
+let yosoDate = new Date(Date.parse('2021-05-17T22:08:00Z'))
 let solosuDate = new Date(Date.parse('2021-04-28T23:00:50Z'))
-let yosoDate = new Date(Date.parse('2021-05-13T16:48:00Z'))
-document.getElementById("solosu-time").innerHTML = "Latest update : " + formatDate(solosuDate) ;
 document.getElementById("yoso-time").innerHTML = "Latest update : " + formatDate(yosoDate) ;
+document.getElementById("solosu-time").innerHTML = "Latest update : " + formatDate(solosuDate) ;
+document.getElementById("yoso-changelog").innerHTML = "Improved performance by refactoring planet trails. (Also fixes potential glitches during replay rewind)" ;
+document.getElementById("yoso-download").href = "https://www.patreon.com/posts/yoso-2021-518-0-51378338"
 
 changeProgressBar(100);
 changeProgressText("Complete!");
