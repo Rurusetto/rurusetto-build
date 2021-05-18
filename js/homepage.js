@@ -346,7 +346,7 @@ changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
 let solosuDate = new Date(Date.parse('2021-04-28T23:00:50Z'))
-let yosoDate = new Date(Date.parse('2021-05-13T16:48:00Z'))
+let yosoDate = new Date(Date.parse('2021-05-17T22:08:00Z'))
 document.getElementById("solosu-release-date").innerHTML = "Latest release : " + formatDate(solosuDate) ;
 document.getElementById("yoso-release-date").innerHTML = "Latest release : " + formatDate(yosoDate) ;
 

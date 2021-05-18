@@ -41,8 +41,8 @@ async function callAPI(url, rulesetsName) {
         document.getElementById('date').innerHTML = "Latest release at " + solosuDate;
         document.getElementById('version').innerHTML = "Last Update : " + solosuVersion+ " (" + formatDate(solosuDate) + ")";
     } else if (rulesetsName === 'yoso') {
-        let yosoDate = new Date( Date.parse('2021-05-13T16:48:00Z') );
-        let yosoVersion = "2021.513.0";
+        let yosoDate = new Date( Date.parse('2021-05-17T22:08:00Z') );
+        let yosoVersion = "2021.518.0";
         document.getElementById('date').innerHTML = "Latest release at " + yosoDate;
         document.getElementById('version').innerHTML = "Last Update : " + yosoVersion + " (" + formatDate(yosoDate) + ")";
     } else {
