@@ -499,6 +499,7 @@ function openProgressBar() {
     <div class="progress">
         <div class="progress-bar progress-bar-striped" style="min-width: 20px;"></div>
     </div>`
+    changeProgressBar(0);
 }
 
 function disableRefresh(mode) {
