@@ -350,7 +350,7 @@ async function callTau(url) {
                 let updateDate = new Date( Date.parse(assets.updated_at) )
                 document.getElementById("diva-button").innerHTML = "detail & download";
                 document.getElementById("diva-button").disabled = false;
-                document.getElementById("diva-version").innerHTML = latestRelease.name;
+                document.getElementById("diva-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
                 document.getElementById("diva-title").innerHTML = latestRelease.name + " changelog & file detail";
                 document.getElementById("diva-changelog").innerHTML = md.render(latestRelease.body);
                 document.getElementById("diva-download").href = assets.browser_download_url
