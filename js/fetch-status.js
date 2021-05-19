@@ -581,12 +581,16 @@ percentNow += progressBarUp;
 
 callLazer("https://api.github.com/repos/ppy/osu/releases/latest");
 
-document.getElementById("yoso-size").innerHTML = "Size : " + prettifyBytes(179200)
-document.getElementById("solosu-size").innerHTML = "Size : " + prettifyBytes(87040)
-let yosoDate = new Date(Date.parse('2021-05-17T22:08:00Z'))
+let solosuVersion = "-"
+let yosoVersion = "2021.518.0"
 let solosuDate = new Date(Date.parse('2021-04-28T23:00:50Z'))
-document.getElementById("yoso-time").innerHTML = "Latest update : " + formatDate(yosoDate) ;
+let yosoDate = new Date(Date.parse('2021-05-17T22:08:00Z'))
+document.getElementById("solosu-version").innerHTML = solosuVersion + " (" + formatDate(solosuDate) + ")"
+document.getElementById("yoso-version").innerHTML = yosoVersion + " (" + formatDate(yosoDate) + ")"
 document.getElementById("solosu-time").innerHTML = "Latest update : " + formatDate(solosuDate) ;
+document.getElementById("yoso-time").innerHTML = "Latest update : " + formatDate(yosoDate) ;
+document.getElementById("solosu-size").innerHTML = "Size : " + prettifyBytes(87040)
+document.getElementById("yoso-size").innerHTML = "Size : " + prettifyBytes(179200)
 document.getElementById("yoso-changelog").innerHTML = "Improved performance by refactoring planet trails. (Also fixes potential glitches during replay rewind)" ;
 document.getElementById("yoso-download").href = "https://www.patreon.com/posts/yoso-2021-518-0-51378338"
 
