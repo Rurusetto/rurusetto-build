@@ -76,7 +76,7 @@ async function callTouhosu(url) {
         let updateDate = new Date( Date.parse(assets.updated_at) )
         document.getElementById("touhosu-button").innerHTML = "detail & download";
         document.getElementById("touhosu-button").disabled = false;
-        document.getElementById("touhosu-version").innerHTML = latestRelease.name;
+        document.getElementById("touhosu-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
         document.getElementById("touhosu-title").innerHTML = latestRelease.name + " changelog & file detail";
         document.getElementById("touhosu-changelog").innerHTML = md.render(latestRelease.body);
         document.getElementById("touhosu-download").href = assets.browser_download_url;
@@ -105,7 +105,7 @@ async function callMvis(url) {
         let updateDate = new Date( Date.parse(assets.updated_at) )
         document.getElementById("mvis-button").innerHTML = "detail & download";
         document.getElementById("mvis-button").disabled = false;
-        document.getElementById("mvis-version").innerHTML = latestRelease.name;
+        document.getElementById("mvis-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
         document.getElementById("mvis-title").innerHTML = latestRelease.name + " changelog & file detail";
         document.getElementById("mvis-changelog").innerHTML = md.render(latestRelease.body);
         document.getElementById("mvis-download").href = assets.browser_download_url
@@ -133,7 +133,7 @@ async function callBosu(url) {
         let updateDate = new Date( Date.parse(assets.updated_at) )
         document.getElementById("bosu-button").innerHTML = "detail & download";
         document.getElementById("bosu-button").disabled = false;
-        document.getElementById("bosu-version").innerHTML = latestRelease.name;
+        document.getElementById("bosu-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
         document.getElementById("bosu-title").innerHTML = latestRelease.name + " changelog & file detail";
         document.getElementById("bosu-changelog").innerHTML = md.render(latestRelease.body);
         document.getElementById("bosu-download").href = assets.browser_download_url
@@ -160,7 +160,7 @@ async function callSentakki(url) {
         let updateDate = new Date( Date.parse(assets.updated_at) )
         document.getElementById("sentakki-button").innerHTML = "detail & download";
         document.getElementById("sentakki-button").disabled = false;
-        document.getElementById("sentakki-version").innerHTML = latestRelease.name;
+        document.getElementById("sentakki-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
         document.getElementById("sentakki-title").innerHTML = latestRelease.name + " changelog & file detail";
         document.getElementById("sentakki-changelog").innerHTML = md.render(latestRelease.body);
         document.getElementById("sentakki-download").href = assets.browser_download_url
@@ -187,7 +187,7 @@ async function callSwing(url) {
         let updateDate = new Date( Date.parse(assets.updated_at) )
         document.getElementById("swing-button").innerHTML = "detail & download";
         document.getElementById("swing-button").disabled = false;
-        document.getElementById("swing-version").innerHTML = latestRelease.name;
+        document.getElementById("swing-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
         document.getElementById("swing-title").innerHTML = latestRelease.name + " changelog & file detail";
         document.getElementById("swing-changelog").innerHTML = md.render(latestRelease.body);
         document.getElementById("swing-download").href = assets.browser_download_url
@@ -214,7 +214,7 @@ async function callTau(url) {
         let updateDate = new Date( Date.parse(assets.updated_at) )
         document.getElementById("tau-button").innerHTML = "detail & download";
         document.getElementById("tau-button").disabled = false;
-        document.getElementById("tau-version").innerHTML = latestRelease.name;
+        document.getElementById("tau-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
         document.getElementById("tau-title").innerHTML = latestRelease.name + " changelog & file detail";
         document.getElementById("tau-changelog").innerHTML = md.render(latestRelease.body);
         document.getElementById("tau-download").href = assets.browser_download_url
@@ -242,7 +242,7 @@ async function callTau(url) {
                 let updateDate = new Date( Date.parse(assets.updated_at) )
                 document.getElementById("hitokori-button").innerHTML = "detail & download";
                 document.getElementById("hitokori-button").disabled = false;
-                document.getElementById("hitokori-version").innerHTML = latestRelease.name;
+                document.getElementById("hitokori-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
                 document.getElementById("hitokori-title").innerHTML = latestRelease.name + " changelog & file detail";
                 document.getElementById("hitokori-changelog").innerHTML = md.render(latestRelease.body);
                 document.getElementById("hitokori-download").href = assets.browser_download_url
@@ -269,7 +269,7 @@ async function callTau(url) {
                 let updateDate = new Date( Date.parse(assets.updated_at) )
                 document.getElementById("soyokaze-button").innerHTML = "detail & download";
                 document.getElementById("soyokaze-button").disabled = false;
-                document.getElementById("soyokaze-version").innerHTML = latestRelease.name;
+                document.getElementById("soyokaze-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
                 document.getElementById("soyokaze-title").innerHTML = latestRelease.name + " changelog & file detail";
                 document.getElementById("soyokaze-changelog").innerHTML = md.render(latestRelease.body);
                 document.getElementById("soyokaze-download").href = assets.browser_download_url
@@ -296,7 +296,7 @@ async function callTau(url) {
                 let updateDate = new Date( Date.parse(assets.updated_at) )
                 document.getElementById("cytosu-button").innerHTML = "detail & download";
                 document.getElementById("cytosu-button").disabled = false;
-                document.getElementById("cytosu-version").innerHTML = latestRelease.name;
+                document.getElementById("cytosu-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
                 document.getElementById("cytosu-title").innerHTML = latestRelease.name + " changelog & file detail";
                 document.getElementById("cytosu-changelog").innerHTML = md.render(latestRelease.body);
                 document.getElementById("cytosu-download").href = assets.browser_download_url
@@ -323,7 +323,7 @@ async function callTau(url) {
                 let updateDate = new Date( Date.parse(assets.updated_at) )
                 document.getElementById("rush-button").innerHTML = "detail & download";
                 document.getElementById("rush-button").disabled = false;
-                document.getElementById("rush-version").innerHTML = latestRelease.name;
+                document.getElementById("rush-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
                 document.getElementById("rush-title").innerHTML = latestRelease.name + " changelog & file detail";
                 document.getElementById("rush-changelog").innerHTML = md.render(latestRelease.body);
                 document.getElementById("rush-download").href = assets.browser_download_url
@@ -377,7 +377,7 @@ async function callTau(url) {
                 let updateDate = new Date( Date.parse(assets.updated_at) )
                 document.getElementById("hishigata-button").innerHTML = "detail & download";
                 document.getElementById("hishigata-button").disabled = false;
-                document.getElementById("hishigata-version").innerHTML = latestRelease.name;
+                document.getElementById("hishigata-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
                 document.getElementById("hishigata-title").innerHTML = latestRelease.name + " changelog & file detail";
                 document.getElementById("hishigata-changelog").innerHTML = md.render(latestRelease.body);
                 document.getElementById("hishigata-download").href = assets.browser_download_url
@@ -404,7 +404,7 @@ async function callKaraoke(url) {
         let updateDate = new Date( Date.parse(assets.updated_at) )
         document.getElementById("karaoke-button").innerHTML = "detail & download";
         document.getElementById("karaoke-button").disabled = false;
-        document.getElementById("karaoke-version").innerHTML = latestRelease.name;
+        document.getElementById("karaoke-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
         document.getElementById("karaoke-title").innerHTML = latestRelease.name + " changelog & file detail";
         document.getElementById("karaoke-changelog").innerHTML = md.render(latestRelease.body);
         document.getElementById("karaoke-download").href = assets.browser_download_url
@@ -431,7 +431,7 @@ async function callGamebosu(url) {
         let updateDate = new Date( Date.parse(assets.updated_at) )
         document.getElementById("gamebosu-button").innerHTML = "detail & download";
         document.getElementById("gamebosu-button").disabled = false;
-        document.getElementById("gamebosu-version").innerHTML = latestRelease.name;
+        document.getElementById("gamebosu-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
         document.getElementById("gamebosu-title").innerHTML = latestRelease.name + " changelog & file detail";
         document.getElementById("gamebosu-changelog").innerHTML = md.render(latestRelease.body);
         document.getElementById("gamebosu-download").href = assets.browser_download_url
