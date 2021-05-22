@@ -475,9 +475,36 @@ async function callLazer(url) {
     }
 }
 
+// Solosu
+async function callSolosu(url) {
+
+    // Storing response
+    const response = await fetch(url);
+
+    // Storing data in form of JSON
+    let Data = await response.json();
+    // console.log(Data);
+    if (response) {
+        console.log("solosu Complete")
+        let latestRelease = Data;
+        let assets = Data['assets'][0]
+        let updateDate = new Date( Date.parse(assets.updated_at) )
+        document.getElementById("solosu-button").innerHTML = "detail & download";
+        document.getElementById("solosu-button").disabled = false;
+        document.getElementById("solosu-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
+        document.getElementById("solosu-title").innerHTML = latestRelease.name + " changelog & file detail";
+        document.getElementById("solosu-changelog").innerHTML = md.render(latestRelease.body);
+        document.getElementById("solosu-download").href = assets.browser_download_url
+        document.getElementById("solosu-download-button").innerHTML = "Download";
+        // document.getElementById("solosu-count").innerHTML = "Download Count : " + assets.download_count;
+        document.getElementById("solosu-size").innerHTML = "Size : " + prettifyBytes(assets.size);
+        document.getElementById("solosu-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
+    }
+}
+
 
 // Set rulesets number to get a progress bar work
-const rulesetNumber = 14;
+const rulesetNumber = 16;
 const progressBarUp = 100/rulesetNumber;
 
 function changeProgressBar(percent){
@@ -580,17 +607,17 @@ callGamebosu("https://api.github.com/repos/Game4all/gamebosu/releases/latest");
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
+changeProgressText("Fetch solosu releases...");
+callSentakki("https://api.github.com/repos/flutterish/Solosu/releases/latest");
+changeProgressBar(percentNow);
+percentNow += progressBarUp;
+
 callLazer("https://api.github.com/repos/ppy/osu/releases/latest");
 
-let solosuVersion = "-"
 let yosoVersion = "2021.518.0"
-let solosuDate = new Date(Date.parse('2021-04-28T23:00:50Z'))
 let yosoDate = new Date(Date.parse('2021-05-17T22:08:00Z'))
-document.getElementById("solosu-version").innerHTML = solosuVersion + " (" + formatDate(solosuDate) + ")"
 document.getElementById("yoso-version").innerHTML = yosoVersion + " (" + formatDate(yosoDate) + ")"
-document.getElementById("solosu-time").innerHTML = "Latest update : " + formatDate(solosuDate) ;
 document.getElementById("yoso-time").innerHTML = "Latest update : " + formatDate(yosoDate) ;
-document.getElementById("solosu-size").innerHTML = "Size : " + prettifyBytes(87040)
 document.getElementById("yoso-size").innerHTML = "Size : " + prettifyBytes(179200)
 document.getElementById("yoso-changelog").innerHTML = "Improved performance by refactoring planet trails. (Also fixes potential glitches during replay rewind)" ;
 document.getElementById("yoso-download").href = "https://www.patreon.com/posts/yoso-2021-518-0-51378338"
@@ -681,6 +708,11 @@ function refresh() {
 
     changeProgressText("Fetch gamebosu releases...");
     callGamebosu("https://api.github.com/repos/Game4all/gamebosu/releases/latest");
+    changeProgressBar(percentNow);
+    percentNow += progressBarUp;
+
+    changeProgressText("Fetch solosu releases...");
+    callSentakki("https://api.github.com/repos/flutterish/Solosu/releases/latest");
     changeProgressBar(percentNow);
     percentNow += progressBarUp;
 
