@@ -35,14 +35,10 @@ function formatDate ( date ) {
 
 async function callAPI(url, rulesetsName) {
 
-    if (rulesetsName === 'solosu') {
-        let solosuDate = new Date( Date.parse('2021-04-28T23:00:50Z') );
-        let solosuVersion = "-";
-        document.getElementById('date').innerHTML = "Latest release at " + solosuDate;
-        document.getElementById('version').innerHTML = "Last Update : " + solosuVersion+ " (" + formatDate(solosuDate) + ")";
-    } else if (rulesetsName === 'yoso') {
-        let yosoDate = new Date( Date.parse('2021-05-17T22:08:00Z') );
-        let yosoVersion = "2021.518.0";
+    
+    if (rulesetsName === 'yoso') {
+        let yosoDate = new Date( Date.parse('2021-05-18T17:11:00Z') );
+        let yosoVersion = "2021.518.1";
         document.getElementById('date').innerHTML = "Latest release at " + yosoDate;
         document.getElementById('version').innerHTML = "Last Update : " + yosoVersion + " (" + formatDate(yosoDate) + ")";
     } else {
@@ -75,7 +71,7 @@ function deleteProgressBar () {
     document.getElementById("fetch-progress").innerHTML = "";
 }
 
-let url = ''
+let url = 'https://api.github.com/repos/flutterish/Solosu/releases/latest'
 let rulesetsName = 'solosu'
 let progressText = document.getElementById('progresstext');
 
