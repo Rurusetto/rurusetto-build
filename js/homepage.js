@@ -367,7 +367,7 @@ callSolosu("https://api.github.com/repos/flutterish/Solosu/releases/latest");
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
-let yosoDate = new Date(Date.parse('2021-05-18T17:11:00Z'))
+let yosoDate = new Date(Date.parse('2021-05-22T22:03:00Z'))
 document.getElementById("yoso-release-date").innerHTML = "Latest release : " + formatDate(yosoDate) ;
 
 changeProgressBar(100);

@@ -614,13 +614,13 @@ percentNow += progressBarUp;
 
 callLazer("https://api.github.com/repos/ppy/osu/releases/latest");
 
-let yosoVersion = "2021.518.1"
-let yosoDate = new Date(Date.parse('2021-05-18T17:11:00Z'))
+let yosoVersion = "2021.523.0"
+let yosoDate = new Date(Date.parse('2021-05-22T22:03:00Z'))
 document.getElementById("yoso-version").innerHTML = yosoVersion + " (" + formatDate(yosoDate) + ")"
 document.getElementById("yoso-time").innerHTML = "Latest update : " + formatDate(yosoDate) ;
 document.getElementById("yoso-size").innerHTML = "Size : " + prettifyBytes(178176)
-document.getElementById("yoso-changelog").innerHTML = "Futher planet trail improvements" ;
-document.getElementById("yoso-download").href = "https://www.patreon.com/posts/yoso-2021-518-1-51408684"
+document.getElementById("yoso-changelog").innerHTML = "Fixed yoso-specific error on lazer startup" ;
+document.getElementById("yoso-download").href = "https://www.patreon.com/posts/yoso-2021-523-0-51573874"
 
 changeProgressBar(100);
 changeProgressText("Complete!");
