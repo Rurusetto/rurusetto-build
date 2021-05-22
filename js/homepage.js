@@ -363,7 +363,7 @@ changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
 changeProgressText("Fetch solosu releases...");
-callSentakki("https://api.github.com/repos/flutterish/Solosu/releases/latest");
+callSolosu("https://api.github.com/repos/flutterish/Solosu/releases/latest");
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
