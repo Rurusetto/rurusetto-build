@@ -348,7 +348,7 @@ changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
 changeProgressText("Fetch osu!DIVA releases...");
-callDiva("https://api.github.com/repos/Thesola10/osu-DIVA/releases/latest");
+callDiva("https://api.github.com/repos/Artemis-chan/osu-DIVA/releases/latest");
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 

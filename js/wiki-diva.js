@@ -71,7 +71,7 @@ function deleteProgressBar () {
     document.getElementById("fetch-progress").innerHTML = "";
 }
 
-let url = 'https://api.github.com/repos/Thesola10/osu-DIVA/releases/latest'
+let url = 'https://api.github.com/repos/Artemis-chan/osu-DIVA/releases/latest'
 let rulesetsName = 'diva'
 let progressText = document.getElementById('progresstext');
 
