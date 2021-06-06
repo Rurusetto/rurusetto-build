@@ -370,6 +370,9 @@ percentNow += progressBarUp;
 let yosoDate = new Date(Date.parse('2021-05-22T22:03:00Z'))
 document.getElementById("yoso-release-date").innerHTML = "Latest release : " + formatDate(yosoDate) ;
 
+let sandboxDate = new Date(Date.parse('2021-06-08T02:13:00Z'))
+document.getElementById("sandbox-release-date").innerHTML = "Latest release : " + formatDate(sandboxDate) ;
+
 changeProgressBar(100);
 changeProgressText("Complete!");
 window.setTimeout("deleteProgressBar();", 1000);

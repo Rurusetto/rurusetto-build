@@ -622,6 +622,14 @@ document.getElementById("yoso-size").innerHTML = "Size : " + prettifyBytes(17817
 document.getElementById("yoso-changelog").innerHTML = "Fixed yoso-specific error on lazer startup" ;
 document.getElementById("yoso-download").href = "https://www.patreon.com/posts/yoso-2021-523-0-51573874"
 
+let sandboxVersion = "2021.606.0"
+let sandboxDate = new Date(Date.parse('2021-06-08T02:13:00Z'))
+document.getElementById("sandbox-version").innerHTML = sandboxVersion + " (" + formatDate(sandboxDate) + ")"
+document.getElementById("sandbox-time").innerHTML = "Latest update : " + formatDate(sandboxDate) ;
+document.getElementById("sandbox-size").innerHTML = "Size : " + prettifyBytes(178176)
+document.getElementById("sandbox-changelog").innerHTML = "Fixed sandbox-specific error on lazer startup" ;
+document.getElementById("sandbox-download").href = "https://www.patreon.com/posts/sandbox-2021-606-52160921"
+
 changeProgressBar(100);
 changeProgressText("Complete!");
 window.setTimeout("deleteProgressBar();", 2000);
