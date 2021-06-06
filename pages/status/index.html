@@ -273,6 +273,14 @@
                 <div class="progress-bar progress-bar-striped" style="min-width: 20px;"></div>
             </div>
         </div>
+        <p></p>
+        <div class="alert alert-custom  fade in alert-dismissable show">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true" style="font-size:20px">×</span>
+             </button>
+             <i class="fas fa-exclamation-circle"></i> A ruleset name that has a patreon logo (<i class="fab fa-patreon"></i>)in front of its name is a rulesets that is only available for patreon subscriber and a status like version or update date on a ruleset is update by-hand so if you not sure is this link to patreon post is update you must check it on a creator page yourself.
+           </div>
+        <p></p>
         <button id="refresh-button" type="button" class="btn btn-primary" onclick="refresh()" disabled>Refresh</button>
       <p></p>
       <p id="last-update"></p>
@@ -925,11 +933,10 @@
                 </td>
             </tr>
             <tr>
-                <td><a href="https://rulesets.info/posts/yoso">yoso</a></td>
+                <td><a href="https://rulesets.info/posts/yoso"><i class="fab fa-patreon"></i> yoso</a></td>
                 <td>✅</td>
                 <td>Everything works</td>
                 <td id="yoso-version">Fetching data...</td>
-  <!--              <td><a href="https://www.patreon.com/posts/yoso-2021-513-0-51215430">↗️ Patreon</a></td>-->
                 <td>
                     <button id="yoso-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#yosoModal">
                         detail & download
@@ -954,6 +961,43 @@
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                     <a id="yoso-download" href="https://www.patreon.com/evast/posts">
                                         <button id="yoso-download-button" type="button" class="btn btn-primary">Go to Patreon</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://rulesets.info/posts/sandbox"><i class="fab fa-patreon"></i> Sandbox</a></td>
+                <td>✅</td>
+                <td>Everything works</td>
+                <td id="sandbox-version">Fetching data...</td>
+                <td>
+                    <button id="sandbox-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#sandboxModal">
+                        detail & download
+                    </button>
+  
+                    <div class="modal fade" id="sandboxModal" tabindex="-1" aria-labelledby="sandboxModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="sandbox-title" class="modal-title">Sandbox changelog</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="sandbox-changelog">Fetching data...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="sandbox-size">Size : Fetching...</p>
+                                        <p id="sandbox-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="sandbox-download" href="https://www.patreon.com/evast/posts">
+                                        <button id="sandbox-download-button" type="button" class="btn btn-primary">Go to Patreon</button>
                                     </a>
                                 </div>
                             </div>
@@ -1028,6 +1072,7 @@
   <script src="https://rulesets.info/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
     <script src="https://rulesets.info/js/fetch-status.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/cebbc7821d.js" crossorigin="anonymous"></script>
   
   </body>
 

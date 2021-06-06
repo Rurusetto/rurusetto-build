@@ -614,13 +614,21 @@ percentNow += progressBarUp;
 
 callLazer("https://api.github.com/repos/ppy/osu/releases/latest");
 
-let yosoVersion = "2021.523.0"
-let yosoDate = new Date(Date.parse('2021-05-22T22:03:00Z'))
+let yosoVersion = "2021.526.0"
+let yosoDate = new Date(Date.parse('2021-05-26T13:39:00Z'))
 document.getElementById("yoso-version").innerHTML = yosoVersion + " (" + formatDate(yosoDate) + ")"
 document.getElementById("yoso-time").innerHTML = "Latest update : " + formatDate(yosoDate) ;
 document.getElementById("yoso-size").innerHTML = "Size : " + prettifyBytes(178176)
 document.getElementById("yoso-changelog").innerHTML = "Fixed yoso-specific error on lazer startup" ;
 document.getElementById("yoso-download").href = "https://www.patreon.com/posts/yoso-2021-523-0-51573874"
+
+let sandboxVersion = "2021.606.0"
+let sandboxDate = new Date(Date.parse('2021-06-08T02:13:00Z'))
+document.getElementById("sandbox-version").innerHTML = sandboxVersion + " (" + formatDate(sandboxDate) + ")"
+document.getElementById("sandbox-time").innerHTML = "Latest update : " + formatDate(sandboxDate) ;
+document.getElementById("sandbox-size").innerHTML = "Size : " + prettifyBytes(54272)
+document.getElementById("sandbox-changelog").innerHTML = "Added ability to save your best score in 2048 game (handled automatically)" ;
+document.getElementById("sandbox-download").href = "https://www.patreon.com/posts/sandbox-2021-606-52160921"
 
 changeProgressBar(100);
 changeProgressText("Complete!");

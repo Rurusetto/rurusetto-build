@@ -36,11 +36,11 @@ function formatDate ( date ) {
 async function callAPI(url, rulesetsName) {
 
     
-    if (rulesetsName === 'yoso') {
-        let yosoDate = new Date( Date.parse('2021-05-26T13:39:00Z') );
-        let yosoVersion = "2021.526.0";
-        document.getElementById('date').innerHTML = "Latest release at " + yosoDate;
-        document.getElementById('version').innerHTML = "Last Update : " + yosoVersion + " (" + formatDate(yosoDate) + ")";
+    if (rulesetsName === 'sandbox') {
+        let sandboxDate = new Date( Date.parse('2021-06-08T02:13:00Z') );
+        let sandboxVersion = "2021.606.0";
+        document.getElementById('date').innerHTML = "Latest release at " + sandboxDate;
+        document.getElementById('version').innerHTML = "Last Update : " + sandboxVersion + " (" + formatDate(sandboxDate) + ")";
     } else {
         // Storing response
         const response = await fetch(url);
@@ -72,7 +72,7 @@ function deleteProgressBar () {
 }
 
 let url = ''
-let rulesetsName = 'yoso'
+let rulesetsName = 'sandbox'
 let progressText = document.getElementById('progresstext');
 
 console.log("Start fetching...")
