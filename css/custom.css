@@ -1,5 +1,11 @@
 /*Add your custom css here. This will override any existinc thems css*/
 
+.alert-custom{
+  /* font-family: all-round-gothic, "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  background-color:#ff66aa;
+  color:#fff;
+}
+
 body.dark-mode, 
 body.dark-mode main * {
     background: #2d2d2d;
