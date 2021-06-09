@@ -615,7 +615,7 @@ percentNow += progressBarUp;
 callLazer("https://api.github.com/repos/ppy/osu/releases/latest");
 
 let yosoVersion = "2021.608.0"
-let yosoDate = new Date(Date.parse('2021-06-09T20:09:00Z'))
+let yosoDate = new Date(Date.parse('2021-06-08T20:09:00Z'))
 document.getElementById("yoso-version").innerHTML = yosoVersion + " (" + formatDate(yosoDate) + ")"
 document.getElementById("yoso-time").innerHTML = "Latest update : " + formatDate(yosoDate) ;
 document.getElementById("yoso-size").innerHTML = "Size : " + prettifyBytes(178176)
