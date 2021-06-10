@@ -370,7 +370,7 @@ percentNow += progressBarUp;
 let yosoDate = new Date(Date.parse('2021-06-08T20:09:00Z'))
 document.getElementById("yoso-release-date").innerHTML = "Latest release : " + formatDate(yosoDate) ;
 
-let sandboxDate = new Date(Date.parse('2021-06-06T02:13:00Z'))
+let sandboxDate = new Date(Date.parse('2021-06-10T01:07:00Z'))
 document.getElementById("sandbox-release-date").innerHTML = "Latest release : " + formatDate(sandboxDate) ;
 
 changeProgressBar(100);

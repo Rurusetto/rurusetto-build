@@ -37,8 +37,8 @@ async function callAPI(url, rulesetsName) {
 
     
     if (rulesetsName === 'sandbox') {
-        let sandboxDate = new Date( Date.parse('2021-06-06T02:13:00Z') );
-        let sandboxVersion = "2021.606.0";
+        let sandboxDate = new Date( Date.parse('2021-06-10T01:07:00Z') );
+        let sandboxVersion = "2021.610.0";
         document.getElementById('date').innerHTML = "Latest release at " + sandboxDate;
         document.getElementById('version').innerHTML = "Last Update : " + sandboxVersion + " (" + formatDate(sandboxDate) + ")";
     } else {
