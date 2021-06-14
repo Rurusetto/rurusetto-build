@@ -502,9 +502,36 @@ async function callSolosu(url) {
     }
 }
 
+// Sandbox
+async function callSandbox(url) {
+
+    // Storing response
+    const response = await fetch(url);
+
+    // Storing data in form of JSON
+    let Data = await response.json();
+    // console.log(Data);
+    if (response) {
+        console.log("sandbox Complete")
+        let latestRelease = Data;
+        let assets = Data['assets'][0]
+        let updateDate = new Date( Date.parse(assets.updated_at) )
+        document.getElementById("sandbox-button").innerHTML = "detail & download";
+        document.getElementById("sandbox-button").disabled = false;
+        document.getElementById("sandbox-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
+        document.getElementById("sandbox-title").innerHTML = latestRelease.name + " changelog & file detail";
+        document.getElementById("sandbox-changelog").innerHTML = md.render(latestRelease.body);
+        document.getElementById("sandbox-download").href = assets.browser_download_url
+        document.getElementById("sandbox-download-button").innerHTML = "Download";
+        // document.getElementById("sandbox-count").innerHTML = "Download Count : " + assets.download_count;
+        document.getElementById("sandbox-size").innerHTML = "Size : " + prettifyBytes(assets.size);
+        document.getElementById("sandbox-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
+    }
+}
+
 
 // Set rulesets number to get a progress bar work
-const rulesetNumber = 16;
+const rulesetNumber = 17;
 const progressBarUp = 100/rulesetNumber;
 
 function changeProgressBar(percent){
@@ -612,6 +639,11 @@ callSolosu("https://api.github.com/repos/flutterish/Solosu/releases/latest");
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
+changeProgressText("Fetch Sandbox releases...");
+callSandbox("https://api.github.com/repos/EVAST9919/lazer-sandbox/releases/latest");
+changeProgressBar(percentNow);
+percentNow += progressBarUp;
+
 callLazer("https://api.github.com/repos/ppy/osu/releases/latest");
 
 let yosoVersion = "2021.612.0"
@@ -621,14 +653,6 @@ document.getElementById("yoso-time").innerHTML = "Latest update : " + formatDate
 document.getElementById("yoso-size").innerHTML = "Size : " + prettifyBytes(178176)
 document.getElementById("yoso-changelog").innerHTML = "Fixed star rating system isn't working" ;
 document.getElementById("yoso-download").href = "https://www.patreon.com/posts/yoso-2021-608-0-52268917"
-
-let sandboxVersion = "2021.611.0"
-let sandboxDate = new Date(Date.parse('2021-06-11T00:56:00Z'))
-document.getElementById("sandbox-version").innerHTML = sandboxVersion + " (" + formatDate(sandboxDate) + ")"
-document.getElementById("sandbox-time").innerHTML = "Latest update : " + formatDate(sandboxDate) ;
-document.getElementById("sandbox-size").innerHTML = "Size : " + prettifyBytes(54272)
-document.getElementById("sandbox-changelog").innerHTML = "- Added Samples/Textures to FlappyDon game - Added ability to save high score - Added ability to mention creators in game-select screen (added FlappyDon creator mention)" ;
-document.getElementById("sandbox-download").href = "https://www.patreon.com/posts/sandbox-2021-610-52318686"
 
 changeProgressBar(100);
 changeProgressText("Complete!");
@@ -721,6 +745,11 @@ function refresh() {
 
     changeProgressText("Fetch solosu releases...");
     callSolosu("https://api.github.com/repos/flutterish/Solosu/releases/latest");
+    changeProgressBar(percentNow);
+    percentNow += progressBarUp;
+
+    changeProgressText("Fetch Sandbox releases...");
+    callSandbox("https://api.github.com/repos/EVAST9919/lazer-sandbox/releases/latest");
     changeProgressBar(percentNow);
     percentNow += progressBarUp;
 

@@ -279,8 +279,25 @@ async function callSolosu(url) {
     }
 }
 
+// Sandbox
+async function callSandbox(url) {
+
+    // Storing response
+    const response = await fetch(url);
+
+    // Storing data in form of JSON
+    let Data = await response.json();
+    // console.log(Data);
+    if (response) {
+        console.log("sandbox Complete")
+        let assets = Data['assets'][0]
+        let updateDate = new Date( Date.parse(assets.updated_at) )
+        document.getElementById("sandbox-release-date").innerText = "Latest release : " + formatDate(updateDate) ;
+    }
+}
+
 // Set rulesets number to get a progress bar work
-const rulesetNumber = 16;
+const rulesetNumber = 17;
 const progressBarUp = 100/rulesetNumber;
 
 function changeProgressBar(percent){
@@ -367,11 +384,13 @@ callSolosu("https://api.github.com/repos/flutterish/Solosu/releases/latest");
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
+changeProgressText("Fetch Sandbox releases...");
+callSolosu("https://api.github.com/repos/EVAST9919/lazer-sandbox/releases/latest");
+changeProgressBar(percentNow);
+percentNow += progressBarUp;
+
 let yosoDate = new Date(Date.parse('2021-06-12T00:58:00Z'))
 document.getElementById("yoso-release-date").innerHTML = "Latest release : " + formatDate(yosoDate) ;
-
-let sandboxDate = new Date(Date.parse('2021-06-11T00:56:00Z'))
-document.getElementById("sandbox-release-date").innerHTML = "Latest release : " + formatDate(sandboxDate) ;
 
 changeProgressBar(100);
 changeProgressText("Complete!");

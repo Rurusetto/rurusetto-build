@@ -35,27 +35,19 @@ function formatDate ( date ) {
 
 async function callAPI(url, rulesetsName) {
 
-    
-    if (rulesetsName === 'sandbox') {
-        let sandboxDate = new Date( Date.parse('2021-06-11T00:56:00Z') );
-        let sandboxVersion = "2021.611.0";
-        document.getElementById('date').innerHTML = "Latest release at " + sandboxDate;
-        document.getElementById('version').innerHTML = "Last Update : " + sandboxVersion + " (" + formatDate(sandboxDate) + ")";
-    } else {
-        // Storing response
-        const response = await fetch(url);
+    // Storing response
+    const response = await fetch(url);
 
-        // Storing data in form of JSON
-        let Data = await response.json();
-        // console.log(Data);
-        if (response) {
-            console.log(rulesetsName + " Complete")
-            let latestRelease = Data;
-            let assets = Data['assets'][0]
-            let updateDate = new Date( Date.parse(assets.updated_at) )
-            document.getElementById('date').innerHTML = "Latest release at " + updateDate;
-            document.getElementById('version').innerHTML = "Last Update : " + latestRelease.name + " (" + formatDate(updateDate) + ")";
-        }
+    // Storing data in form of JSON
+    let Data = await response.json();
+    // console.log(Data);
+    if (response) {
+        console.log(rulesetsName + " Complete")
+        let latestRelease = Data;
+        let assets = Data['assets'][0]
+        let updateDate = new Date( Date.parse(assets.updated_at) )
+        document.getElementById('date').innerHTML = "Latest release at " + updateDate;
+        document.getElementById('version').innerHTML = "Last Update : " + latestRelease.name + " (" + formatDate(updateDate) + ")";
     }
 }
 
@@ -71,7 +63,7 @@ function deleteProgressBar () {
     document.getElementById("fetch-progress").innerHTML = "";
 }
 
-let url = ''
+let url = 'https://api.github.com/repos/EVAST9919/lazer-sandbox/releases/latest'
 let rulesetsName = 'sandbox'
 let progressText = document.getElementById('progresstext');
 
