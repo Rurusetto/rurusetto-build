@@ -933,6 +933,46 @@
                 </td>
             </tr>
             <tr>
+                <td><a href="https://rulesets.info/posts/sandbox"></i> Sandbox</a></td>
+                <td>✅</td>
+                <td>Everything works</td>
+                <td id="sandbox-version">Fetching data...</td>
+                <td>
+                    <button id="sandbox-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#sandboxModal">
+                        detail & download
+                    </button>
+  
+                    <div class="modal fade" id="sandboxModal" tabindex="-1" aria-labelledby="sandboxModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="sandbox-title" class="modal-title">Fetching title...</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Changelog</h4>
+                                    <p id="sandbox-changelog">Fetching data...</p>
+                                    <h4>File Detail</h4>
+                                    <div class="mono-font">
+                                        <p id="sandbox-size">Size : Fetching...</p>
+                                        <p id="sandbox-time">Update Time : Fetching...</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a id="sandbox-release" href="https://github.com/EVAST9919/lazer-sandbox/releases">
+                                        <button id="sandbox-release-button" type="button" class="btn btn-primary">Release Page</button>
+                                    </a>
+                                    <a id="sandbox-download" href="https://github.com/EVAST9919/lazer-sandbox/releases">
+                                        <button id="sandbox-download-button" type="button" class="btn btn-primary">Download</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                </td>
+            </tr>
+            <tr>
                 <td><a href="https://rulesets.info/posts/yoso"><i class="fab fa-patreon"></i> yoso</a></td>
                 <td>✅</td>
                 <td>Everything works</td>
@@ -961,43 +1001,6 @@
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                     <a id="yoso-download" href="https://www.patreon.com/evast/posts">
                                         <button id="yoso-download-button" type="button" class="btn btn-primary">Go to Patreon</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-                </td>
-            </tr>
-            <tr>
-                <td><a href="https://rulesets.info/posts/sandbox"><i class="fab fa-patreon"></i> Sandbox</a></td>
-                <td>✅</td>
-                <td>Everything works</td>
-                <td id="sandbox-version">Fetching data...</td>
-                <td>
-                    <button id="sandbox-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#sandboxModal">
-                        detail & download
-                    </button>
-  
-                    <div class="modal fade" id="sandboxModal" tabindex="-1" aria-labelledby="sandboxModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h3 id="sandbox-title" class="modal-title">Sandbox changelog</h3>
-                                </div>
-                                <div class="modal-body">
-                                    <h4>Changelog</h4>
-                                    <p id="sandbox-changelog">Fetching data...</p>
-                                    <h4>File Detail</h4>
-                                    <div class="mono-font">
-                                        <p id="sandbox-size">Size : Fetching...</p>
-                                        <p id="sandbox-time">Update Time : Fetching...</p>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <a id="sandbox-download" href="https://www.patreon.com/evast/posts">
-                                        <button id="sandbox-download-button" type="button" class="btn btn-primary">Go to Patreon</button>
                                     </a>
                                 </div>
                             </div>
