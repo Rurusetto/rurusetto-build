@@ -63,7 +63,7 @@ function deleteProgressBar () {
     document.getElementById("fetch-progress").innerHTML = "";
 }
 
-let url = 'https://api.github.com/repos/EVAST9919/lazer-sandbox/releases'
+let url = 'https://api.github.com/repos/EVAST9919/lazer-sandbox/releases/latest'
 let rulesetsName = 'sandbox'
 let progressText = document.getElementById('progresstext');
 
