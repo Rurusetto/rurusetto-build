@@ -385,7 +385,7 @@ changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
 changeProgressText("Fetch Sandbox releases...");
-callSolosu("https://api.github.com/repos/EVAST9919/lazer-sandbox/releases/latest");
+callSandbox("https://api.github.com/repos/EVAST9919/lazer-sandbox/releases/latest");
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
