@@ -277,7 +277,7 @@ async function callSandbox(url) {
 }
 
 // Set rulesets number to get a progress bar work
-const rulesetNumber = 17;
+const rulesetNumber = 16;
 const progressBarUp = 100/rulesetNumber;
 
 function changeProgressBar(percent){
