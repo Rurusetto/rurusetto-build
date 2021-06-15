@@ -52,26 +52,6 @@ async function callTouhosu(url) {
     }
 }
 
-
-
-// mvis
-async function callMvis(url) {
-
-    // Storing response
-    const response = await fetch(url);
-
-    // Storing data in form of JSON
-    let Data = await response.json();
-    // console.log(Data);
-    if (response) {
-        console.log("Mvis Complete")
-        let assets = Data['assets'][0]
-        let updateDate = new Date( Date.parse(assets.updated_at) )
-        document.getElementById("mvis-release-date").innerText = "Latest release : " + formatDate(updateDate) ;
-    }
-
-}
-
 // Bosu
 async function callBosu(url) {
 
@@ -297,7 +277,7 @@ async function callSandbox(url) {
 }
 
 // Set rulesets number to get a progress bar work
-const rulesetNumber = 17;
+const rulesetNumber = 16;
 const progressBarUp = 100/rulesetNumber;
 
 function changeProgressBar(percent){
@@ -316,11 +296,6 @@ let percentNow = 0;
 
 changeProgressText("Fetch Touhosu releases...");
 callTouhosu("https://api.github.com/repos/EVAST9919/touhosu/releases/latest")
-changeProgressBar(percentNow);
-percentNow += progressBarUp;
-
-changeProgressText("Fetch mvis releases...");
-callMvis("https://api.github.com/repos/EVAST9919/lazer-m-vis/releases/latest");
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 

@@ -87,36 +87,6 @@ async function callTouhosu(url) {
     }
 }
 
-
-
-// mvis
-async function callMvis(url) {
-
-    // Storing response
-    const response = await fetch(url);
-
-    // Storing data in form of JSON
-    let Data = await response.json();
-    // console.log(Data);
-    if (response) {
-        console.log("Mvis Complete")
-        let latestRelease = Data;
-        let assets = Data['assets'][0]
-        let updateDate = new Date( Date.parse(assets.updated_at) )
-        document.getElementById("mvis-button").innerHTML = "detail & download";
-        document.getElementById("mvis-button").disabled = false;
-        document.getElementById("mvis-version").innerHTML = latestRelease.name + " (" + formatDate(updateDate) + ")";
-        document.getElementById("mvis-title").innerHTML = latestRelease.name + " changelog & file detail";
-        document.getElementById("mvis-changelog").innerHTML = md.render(latestRelease.body);
-        document.getElementById("mvis-download").href = assets.browser_download_url
-        document.getElementById("mvis-download-button").innerHTML = "Download";
-        // document.getElementById("mvis-count").innerHTML = "Download Count : " + assets.download_count;
-        document.getElementById("mvis-size").innerHTML = "Size : " + prettifyBytes(assets.size);
-        document.getElementById("mvis-time").innerHTML = "Latest update : " + formatDate(updateDate) ;
-    }
-    
-}
-
 // Bosu
 async function callBosu(url) {
 
@@ -531,7 +501,7 @@ async function callSandbox(url) {
 
 
 // Set rulesets number to get a progress bar work
-const rulesetNumber = 17;
+const rulesetNumber = 16;
 const progressBarUp = 100/rulesetNumber;
 
 function changeProgressBar(percent){
@@ -566,11 +536,6 @@ console.log("Start fetching...")
 
 changeProgressText("Fetch Touhosu releases...");
 callTouhosu("https://api.github.com/repos/EVAST9919/touhosu/releases/latest")
-changeProgressBar(percentNow);
-percentNow += progressBarUp;
-
-changeProgressText("Fetch mvis releases...");
-callMvis("https://api.github.com/repos/EVAST9919/lazer-m-vis/releases/latest");
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
@@ -675,11 +640,6 @@ function refresh() {
 
     changeProgressText("Fetch Touhosu releases...");
     callTouhosu("https://api.github.com/repos/EVAST9919/touhosu/releases/latest")
-    changeProgressBar(refreshPercentNow);
-    refreshPercentNow += progressBarUp;
-
-    changeProgressText("Fetch mvis releases...");
-    callMvis("https://api.github.com/repos/EVAST9919/lazer-m-vis/releases/latest");
     changeProgressBar(refreshPercentNow);
     refreshPercentNow += progressBarUp;
 
