@@ -71,7 +71,7 @@ function deleteProgressBar () {
     document.getElementById("fetch-progress").innerHTML = "";
 }
 
-let url = 'https://api.github.com/repos/Altenhh/tau/releases/latest'
+let url = 'https://api.github.com/repos/naoei/tau/releases/latest'
 let rulesetsName = 'tau'
 let progressText = document.getElementById('progresstext');
 

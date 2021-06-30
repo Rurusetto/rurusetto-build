@@ -555,7 +555,7 @@ changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
 changeProgressText("Fetch tau releases...");
-callTau("https://api.github.com/repos/Altenhh/tau/releases/latest");
+callTau("https://api.github.com/repos/naoei/tau/releases/latest");
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
@@ -659,7 +659,7 @@ function refresh() {
     refreshPercentNow += progressBarUp;
 
     changeProgressText("Fetch tau releases...");
-    callTau("https://api.github.com/repos/Altenhh/tau/releases/latest");
+    callTau("https://api.github.com/repos/naoei/tau/releases/latest");
     changeProgressBar(refreshPercentNow);
     refreshPercentNow += progressBarUp;
 
