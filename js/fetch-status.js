@@ -611,13 +611,13 @@ percentNow += progressBarUp;
 
 callLazer("https://api.github.com/repos/ppy/osu/releases/latest");
 
-let yosoVersion = "2021.612.0"
-let yosoDate = new Date(Date.parse('2021-06-12T00:58:00Z'))
+let yosoVersion = "2021.708.0"
+let yosoDate = new Date(Date.parse('2021-07-08T10:58:00Z'))
 document.getElementById("yoso-version").innerHTML = yosoVersion + " (" + formatDate(yosoDate) + ")"
 document.getElementById("yoso-time").innerHTML = "Latest update : " + formatDate(yosoDate) ;
 document.getElementById("yoso-size").innerHTML = "Size : " + prettifyBytes(178176)
-document.getElementById("yoso-changelog").innerHTML = "Fixed star rating system isn't working" ;
-document.getElementById("yoso-download").href = "https://www.patreon.com/posts/yoso-2021-608-0-52268917"
+document.getElementById("yoso-changelog").innerHTML = "Added FL mod" ;
+document.getElementById("yoso-download").href = "https://www.patreon.com/posts/yoso-2021-708-0-53445204"
 
 changeProgressBar(100);
 changeProgressText("Complete!");

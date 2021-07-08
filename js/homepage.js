@@ -364,7 +364,7 @@ callSandbox("https://api.github.com/repos/EVAST9919/lazer-sandbox/releases/lates
 changeProgressBar(percentNow);
 percentNow += progressBarUp;
 
-let yosoDate = new Date(Date.parse('2021-06-12T00:58:00Z'))
+let yosoDate = new Date(Date.parse('2021-07-08T10:58:00Z'))
 document.getElementById("yoso-release-date").innerHTML = "Latest release : " + formatDate(yosoDate) ;
 
 changeProgressBar(100);
