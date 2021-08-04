@@ -37,8 +37,8 @@ async function callAPI(url, rulesetsName) {
 
     
     if (rulesetsName === 'yoso') {
-        let yosoDate = new Date( Date.parse('2021-07-19T21:54:00Z') );
-        let yosoVersion = "2021.720.0";
+        let yosoDate = new Date( Date.parse('2021-08-03T21:39:00Z') );
+        let yosoVersion = "2021.804.0";
         document.getElementById('date').innerHTML = "Latest release at " + yosoDate;
         document.getElementById('version').innerHTML = "Last Update : " + yosoVersion + " (" + formatDate(yosoDate) + ")";
     } else {
