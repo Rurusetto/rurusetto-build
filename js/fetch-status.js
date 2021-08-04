@@ -616,8 +616,8 @@ let yosoDate = new Date(Date.parse('2021-08-03T21:39:00Z'))
 document.getElementById("yoso-version").innerHTML = yosoVersion + " (" + formatDate(yosoDate) + ")"
 document.getElementById("yoso-time").innerHTML = "Latest update : " + formatDate(yosoDate) ;
 document.getElementById("yoso-size").innerHTML = "Size : " + prettifyBytes(178176)
-document.getElementById("yoso-changelog").innerHTML = "Fixed ruleset error on game startup" ;
-document.getElementById("yoso-download").href = "https://www.patreon.com/posts/yoso-2021-720-0-53882383"
+document.getElementById("yoso-changelog").innerHTML = "Fixed potential shader-related crash" ;
+document.getElementById("yoso-download").href = "https://www.patreon.com/posts/yoso-2021-804-0-54489072"
 
 changeProgressBar(100);
 changeProgressText("Complete!");
